@@ -13,32 +13,19 @@ To facilitate quick scanning, I use the following emojis to indicate the current
 * 💬 **Needs Reply**: Maintainers have asked questions, or there is an ongoing discussion requiring my follow-up.
 * 🛠️ **Patch Sent**: A fix patch has been submitted (by me or others) and is pending review.
 * ✅ **Merged**: The fix patch has been officially accepted and merged into the mainline or a subsystem tree.
-* ❌ **WontFix/Dup**: The behavior is considered expected by design, or the bug is a known/duplicate issue.
+* ❌ **WontFix**: The bug cannot be fixed (e.g., due to design choices or hardware limitations).
+* 🔄 **Already Fixed**: The bug has already been reported and patched on the master branch.
 
 ## 📜 Bug List
 
-| ID | Subsystem | Bug Title | Status | Mailing List Threads | Details |
+| ID | Location | Title | Status | Details | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| #001 | `net/ipv4` | [NULL pointer dereference in tcp_v4_rcv](#) | ✅ **Merged** | [📄 Report](https://lore.kernel.org/) · [🛠️ Patch v2](https://lore.kernel.org/) · [🔗 Commit](https://git.kernel.org/) | [📂 Details](./bugs/001-tcp-null-deref/) |
-| #002 | `mm/slub` | [Use-After-Free in kmem_cache_alloc](#) | 💬 **Needs Reply** | [📄 Report](https://lore.kernel.org/) · [💬 Discussion](https://lore.kernel.org/) | [📂 Details](./bugs/002-slub-uaf/) |
-| #003 | `fs/ext4` | [Memory leak in ext4_fill_super](#) | 🛠️ **Patch Sent** | [📄 Report](https://lore.kernel.org/) · [🛠️ Patch v1](https://lore.kernel.org/) | [📂 Details](./bugs/003-ext4-leak/) |
-| #004 | `drivers/usb` | [Race condition in usb_submit_urb](#) | 👀 **Confirmed** | [📄 Report](https://lore.kernel.org/) · [👀 Acked](https://lore.kernel.org/) | [📂 Details](./bugs/004-usb-race/) |
-| #005 | `bpf` | [Out-of-bounds read in bpf_prog_test](#) | 🆕 **Reported** | [📄 Report](https://lore.kernel.org/) | *Drafting...* |
+| #001 | `drivers/char/agp/amd64-agp.c` | [NULL ptr deref in amd64_fetch_size()](#) | ✅&nbsp;**Merged** | [📂 Link](./bugs/001-amd64-agp-null/) | Backported to v6.1+ |
+| #002 | `arch/x86/mm/numa.c` | [WARN_ON in set_cpu_sibling_map()](#) | 💬&nbsp;**Needs&nbsp;Reply** | [📂 Link](./bugs/002-numa-fake-panic/) | |
+| #003 | `fs/ext4/super.c` | [Memory leak in ext4_fill_super](#) | 🛠️&nbsp;**Patch&nbsp;Sent** | [📂 Link](./bugs/003-ext4-leak/) | CVE-2026-XXXX |
+| #004 | `drivers/usb/core/urb.c` | [Race condition in usb_submit_urb](#) | 👀&nbsp;**Confirmed** | [📂 Link](./bugs/004-usb-race/) | |
+| #005 | `kernel/bpf/core.c` | [Out-of-bounds read in bpf_prog_test](#) | 🆕&nbsp;**Reported** | *Drafting...* | Found via automated modeling |
 
-> **Note:** Clicking the short links under the **"Mailing List Threads"** column will redirect you to the corresponding email archives on `lore.kernel.org`. Clicking **"📂 Details"** will lead you to the reproducer code, full crash logs, and deeper technical analysis.
+> **Note:** Clicking **"📂 Link"** in the `Details` column will navigate to a dedicated page for each bug. These individual pages centralize the complete timeline, discussion history, patch submissions, and all relevant mailing list links (lore.kernel.org) for that specific vulnerability.
 
-## 📁 Repository Structure
 
-This repository not only tracks the status but also archives all relevant technical details for reproducibility. The directory structure is organized as follows:
-
-```text
-.
-├── README.md                 # This overview dashboard
-└── bugs/                     # Detailed archives for all bugs
-    ├── 001-tcp-null-deref/   # Named by "ID-Short_Description"
-    │   ├── README.md         # Crash context, Root Cause Analysis (RCA)
-    │   ├── repro.c           # C language reproducer code
-    │   ├── crash.log         # Full crash logs (e.g., from KASAN/Syzbot)
-    │   └── fix.patch         # The final fix patch file
-    └── 002-slub-uaf/
-        └── ...
