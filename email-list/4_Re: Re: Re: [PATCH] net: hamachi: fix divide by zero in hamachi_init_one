@@ -1,0 +1,63 @@
+Received: from vps0.lunn.ch (unknown [156.67.10.101])
+	by hzbj-edu-front-3.icoremail.net (Coremail) with SMTP id BbQMCkB2lzFYiudpn7CvAQ--.13504S2;
+	Tue, 21 Apr 2026 22:31:54 +0800 (CST)
+Received: from vps0.lunn.ch (unknown [156.67.10.101])
+	by oracle-mxproxy-4 (Coremail) with SMTP id AQAAfwBHTrpUiudp29IJAA--.288S3;
+	Tue, 21 Apr 2026 22:31:50 +0800 (CST)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=lunn.ch;
+	s=20171124; h=In-Reply-To:Content-Disposition:Content-Type:MIME-Version:
+	References:Message-ID:Subject:To:From:Date:From:Sender:Reply-To:Subject:Date:
+	Message-ID:To:Cc:MIME-Version:Content-Type:Content-Transfer-Encoding:
+	Content-ID:Content-Description:Content-Disposition:In-Reply-To:References;
+	bh=PXsNeYsgFU67hH6VkjQTZUZzTnV+Vw2HzA5EZtlBqCA=; b=1O1lYjdHdZpY87l8QKHRarMwDA
+	VO0i5NkS53kqRVfqLjOoGeo6zSKv0qt0RucxISmr4OK9WEFL0EqnLp76UE9JiZpGa/wQuh+NJaQTx
+	zNkbpJ9VB16WMwYVs3v6O4iDF8b5Y9SjrUPe4X6PK3aD1oXb6u9L39PyybPaz1VCNCrM=;
+Received: from andrew by vps0.lunn.ch with local (Exim 4.94.2)
+	(envelope-from <andrew@lunn.ch>)
+	id 1wFC8f-00GuRy-NI
+	for 25181214217@stu.xidian.edu.cn; Tue, 21 Apr 2026 16:31:45 +0200
+Date: Tue, 21 Apr 2026 16:31:45 +0200
+From: Andrew Lunn <andrew@lunn.ch>
+To: =?utf-8?B?546L5piO54Wc?= <25181214217@stu.xidian.edu.cn>
+Subject: Re: Re: Re: Re: [PATCH] net: hamachi: fix divide by zero in
+ hamachi_init_one
+Message-ID: <01259583-8c9f-4fca-b347-106630415951@lunn.ch>
+References: <20260418121804.149171-1-25181214217@stu.xidian.edu.cn>
+ <e1d937ec-d909-4553-9f1e-c89f9b556d6a@lunn.ch>
+ <2543c18f.5194.19da8c3b8d1.Coremail.25181214217@stu.xidian.edu.cn>
+ <ea469046-79dd-4a6e-905e-ea2251ff303b@lunn.ch>
+ <2b8a9736.6147.19daffa0511.Coremail.25181214217@stu.xidian.edu.cn>
+ <1d1947c2-9491-4651-8d5c-ed38c8f7d001@lunn.ch>
+ <3ceabce9.61ec.19db0286713.Coremail.25181214217@stu.xidian.edu.cn>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <3ceabce9.61ec.19db0286713.Coremail.25181214217@stu.xidian.edu.cn>
+X-CM-TRANSID:AQAAfwBHTrpUiudp29IJAA--.288S3
+Authentication-Results: hzbj-edu-front-3.icoremail.net; spf=pass smtp.
+	mail=andrew@lunn.ch; dkim=pass header.i=@lunn.ch
+X-Coremail-Antispam: 1UD129KBjDUn29KB7ZKAUJUUUUU529EdanIXcx71UUUUU7v73
+	VFW2AGmfu7bjvjm3AaLaJ3UjIYCTnIWjp_UUUYU7k0a2IF6F4UM7kC6x804xWl14x267AK
+	xVWUJVW8JwAFIxvE14AKwVWUJVWUGwA2ocxC6xCI17AI4xWl84x0c7CEw4AK67xGY2AK02
+	1l84ACjcxK6xIIjxv20xvE14v26r1j6r1xM28EF7xvwVC0I7IYx2IY6xkF7I0E14v26r1j
+	6r4UM28EF7xvwVC2z280aVAFwI0_Jr0_Gr1l84ACjcxK6I8E87Iv6xkF7I0E14v26r1j6r
+	4UM2AIxVAIcxkEcVAq07x20xvEncxIr21l5I8CrVACY4xI64kE6c02F40Ex7xfMcIj6xII
+	jxv20xvE14v26r1j6r18McIj6I8E87Iv67AKxVWUJVW8JwAm72CE4IkC6x0Yz7v_Jr0_Gr
+	1lF7I21c0EjII2zVCS5cI20VAGYxC7Mx02cVAKzwCY0x0Ix7I2Y4AK64vIr41lcIIF0xvE
+	2Ix0cI8IcVAFwI0_Jr0_JF4lcIIF0xvE2Ix0cI8IcVCY1x0267AKxVWUJVW8JwCYIxAIcV
+	C2z280aVAFwI0_Jr0_Gr1lcIIF0xvEx4A2jsIEc7CjxVAFwI0_Jr0_Gr1l42xK82IYc2Ij
+	64vIr41l4x8a6x804xWl4I8I3I0E4IkC6x0Yz7v_Jr0_Gr1lx2IqxVAqx4xG67AKxVWUJV
+	WUGwC20s026x8GjcxK67AKxVWUGVWUWwC2zVAF1VAY17CE14v26r1j6r15MIIYrxkI7VAK
+	I48JMIIF0xvE42xK8VAvwI8IcIk0rVWUJVWUCbIYCTnIWIevJa73UjIFyTuYvjTR0JPNUU
+	UUU
+
+> Would you prefer I submit a patch that entirely removes
+> `drivers/net/ethernet/packetengines/hamachi.c` and its associated
+> Kconfig/Makefile entries, or will the maintainers take it from here?
+
+Yes, that would be good. Also, the yellowfin driver is of the same
+age, it should also be removed. Please do it as two patches. Sometimes
+a user appears who still uses it, and we need to revert to put it back
+again.
+
+	Andrew
