@@ -18,14 +18,19 @@ To facilitate quick scanning, I use the following emojis to indicate the current
 
 ## 📜 Bug List
 
-| ID | Location | Title | Status | Details | Notes |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| #001 | `drivers/char/agp/amd64-agp.c` | [NULL ptr deref in amd64_fetch_size()](#) | ✅&nbsp;**Merged** | [📂 Link](./bugs/001-amd64-agp-null/) | Backported to v6.1+ |
-| #002 | `arch/x86/mm/numa.c` | [WARN_ON in set_cpu_sibling_map()](#) | 💬&nbsp;**Needs&nbsp;Reply** | [📂 Link](./bugs/002-numa-fake-panic/) | |
-| #003 | `fs/ext4/super.c` | [Memory leak in ext4_fill_super](#) | 🛠️&nbsp;**Patch&nbsp;Sent** | [📂 Link](./bugs/003-ext4-leak/) | CVE-2026-XXXX |
-| #004 | `drivers/usb/core/urb.c` | [Race condition in usb_submit_urb](#) | 👀&nbsp;**Confirmed** | [📂 Link](./bugs/004-usb-race/) | |
-| #005 | `kernel/bpf/core.c` | [Out-of-bounds read in bpf_prog_test](#) | 🆕&nbsp;**Reported** | *Drafting...* | Found via automated modeling |
+| ID   | Location                                         | Title                                                        | Status               | Details                                                      | Notes                        |
+| :--- | :----------------------------------------------- | :----------------------------------------------------------- | :------------------- | :----------------------------------------------------------- | :--------------------------- |
+| #001 | `drivers/char/agp/amd64-agp.c`                   | NULL ptr deref in amd64_fetch_size()                         | 👀**Confirmed**       | [📂 Link](./bugs/001-amd64-agp-null/)                         |                              |
+| #002 | `drivers/net/ethernet/packetengines/hamachi.c`   | net: packetengines: remove obsolete hamachi driver           | ✅ **Merged**         | [📂 Link](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=4cf42f9c3e3624fedf4f6c38c3d81d80c8b3cbd6) |                              |
+| #003 | `drivers/net/ethernet/packetengines/yellowfin.c` | net: packetengines: remove obsolete yellowfin driver and vendor dir | ✅ **Merged**         | [📂 Link](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=aec3202247b4ab41c5bf3b9f704a2d9a323a051b) |                              |
+| #004 |                                                  |                                                              | 👀&nbsp;**Confirmed** | [📂 Link](./bugs/004-usb-race/)                               |                              |
+| #005 |                                                  |                                                              | 🆕&nbsp;**Reported**  | 📂 Link                                                       | Found via automated modeling |
+|      |                                                  |                                                              |                      | 📂 Link                                                       |                              |
+|      |                                                  |                                                              |                      | 📂 Link                                                       |                              |
+|      |                                                  |                                                              |                      | 📂 Link                                                       |                              |
+|      |                                                  |                                                              |                      | 📂 Link                                                       |                              |
+|      |                                                  |                                                              |                      | 📂 Link                                                       |                              |
+|      |                                                  |                                                              |                      | 📂 Link                                                       |                              |
 
 > **Note:** Clicking **"📂 Link"** in the `Details` column will navigate to a dedicated page for each bug. These individual pages centralize the complete timeline, discussion history, patch submissions, and all relevant mailing list links (lore.kernel.org) for that specific vulnerability.
-
 
