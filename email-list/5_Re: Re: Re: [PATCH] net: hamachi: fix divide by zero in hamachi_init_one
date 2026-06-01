@@ -1,0 +1,44 @@
+> Yes, that would be good. Also, the yellowfin driver is of the same
+> age, it should also be removed. Please do it as two patches. Sometimes
+> a user appears who still uses it, and we need to revert to put it back
+> again.
+
+Thanks for the guidance. I will prepare and send two separate patches to remove both the hamachi and yellowfin drivers shortly.
+
+> So i suggest you ignore PCI devices. Look at PCIe devices. And check
+> they are modern devices, something from the last 10 years. Otherwise
+> you are just going it make Maintainers unhappy with you.
+> 
+> I would also suggest you downplay the security aspect of this. Your
+> scenarios using VMs or inserting hardware are not great. Just say they
+> are bugs.
+
+Understood. We will adjust our fuzzing targets to focus on modern PCIe devices and report future findings as standard bugs rather than security vulnerabilities. 
+
+Thank you again for taking the time to point us in the right direction.
+
+Best regards,
+Mingyu Wang
+
+2026-04-21 22:45:00 "Andrew Lunn" <andrew@lunn.ch> 写道：
+> > To give some context on why this was triggered: we are not targeting
+> > the Hamachi device specifically. We are currently running a broad,
+> > automated fuzzing campaign across all PCI/PCIe drivers in the kernel
+> > tree to stress-test the driver core and error-handling
+> > paths. Hamachi was tested simply because it gets built in generic
+> > configurations like `allyesconfig`.
+> 
+> It is well know that Maintainer are overloaded, there are more patches
+> than we can handle. We don't like to waste our time giving review
+> comments on drivers which are from the last century and are probably
+> not used.
+> 
+> So i suggest you ignore PCI devices. Look at PCIe devices. And check
+> they are modern devices, something from the last 10 years. Otherwise
+> you are just going it make Maintainers unhappy with you.
+> 
+> I would also suggest you downplay the security aspect of this. Your
+> scenarios using VMs or inserting hardware are not great. Just say they
+> are bugs.
+> 
+>     Andrew
