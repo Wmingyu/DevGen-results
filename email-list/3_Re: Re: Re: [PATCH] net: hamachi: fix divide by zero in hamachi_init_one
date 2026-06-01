@@ -1,0 +1,112 @@
+Received: from 25181214217$stu.xidian.edu.cn ( [113.200.174.80] ) by
+ ajax-webmail-hzbj-edu-front-4.icoremail.net (Coremail) ; Tue, 21 Apr 2026
+ 21:08:51 +0800 (GMT+08:00)
+X-Originating-IP: [113.200.174.80]
+Date: Tue, 21 Apr 2026 21:08:51 +0800 (GMT+08:00)
+X-CM-HeaderCharset: UTF-8
+From: =?UTF-8?B?546L5piO54Wc?= <25181214217@stu.xidian.edu.cn>
+To: "Andrew Lunn" <andrew@lunn.ch>
+Subject: Re: Re: Re: Re: [PATCH] net: hamachi: fix divide by zero in
+ hamachi_init_one
+X-Priority: 3
+X-Mailer: Coremail Webmail Server Version 2024.3-cmXT6 build
+ 20250410(2f5ccd7f) Copyright (c) 2002-2026 www.mailtech.cn
+ mispb-8dfce572-2f24-404d-b59d-0dd2e304114c-icoremail.cn
+In-Reply-To: <1d1947c2-9491-4651-8d5c-ed38c8f7d001@lunn.ch>
+References: <20260418121804.149171-1-25181214217@stu.xidian.edu.cn>
+ <e1d937ec-d909-4553-9f1e-c89f9b556d6a@lunn.ch>
+ <2543c18f.5194.19da8c3b8d1.Coremail.25181214217@stu.xidian.edu.cn>
+ <ea469046-79dd-4a6e-905e-ea2251ff303b@lunn.ch>
+ <2b8a9736.6147.19daffa0511.Coremail.25181214217@stu.xidian.edu.cn>
+ <1d1947c2-9491-4651-8d5c-ed38c8f7d001@lunn.ch>
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset=UTF-8
+MIME-Version: 1.0
+Message-ID: <3ceabce9.61ec.19db0286713.Coremail.25181214217@stu.xidian.edu.cn>
+X-Coremail-Locale: zh_CN
+
+SGkgQW5kcmV3LAoKWW91IG1ha2UgYSBmYWlyIHBvaW50IHJlZ2FyZGluZyB0aGUgdGhyZWF0IG1v
+ZGVsLiBJIGFncmVlIHRoYXQgcmVxdWlyaW5nIGhvc3QtbGV2ZWwgY29udHJvbCB0byBpbmplY3Qg
+bWFsaWNpb3VzIGVtdWxhdGVkIFBDSSBkZXZpY2VzIG1ha2VzIHRoaXMgaW1wcmFjdGljYWwgYXMg
+YSByZWFsLXdvcmxkIGV4cGxvaXQuIAoKVG8gZ2l2ZSBzb21lIGNvbnRleHQgb24gd2h5IHRoaXMg
+d2FzIHRyaWdnZXJlZDogd2UgYXJlIG5vdCB0YXJnZXRpbmcgdGhlIEhhbWFjaGkgZGV2aWNlIHNw
+ZWNpZmljYWxseS4gV2UgYXJlIGN1cnJlbnRseSBydW5uaW5nIGEgYnJvYWQsIGF1dG9tYXRlZCBm
+dXp6aW5nIGNhbXBhaWduIGFjcm9zcyBhbGwgUENJL1BDSWUgZHJpdmVycyBpbiB0aGUga2VybmVs
+IHRyZWUgdG8gc3RyZXNzLXRlc3QgdGhlIGRyaXZlciBjb3JlIGFuZCBlcnJvci1oYW5kbGluZyBw
+YXRocy4gSGFtYWNoaSB3YXMgdGVzdGVkIHNpbXBseSBiZWNhdXNlIGl0IGdldHMgYnVpbHQgaW4g
+Z2VuZXJpYyBjb25maWd1cmF0aW9ucyBsaWtlIGBhbGx5ZXNjb25maWdgLgoKVGhhdCBiZWluZyBz
+YWlkLCBJIGNvbXBsZXRlbHkgYWdyZWUgd2l0aCB5b3VyIHN1Z2dlc3Rpb24uIElmIHRoZSBoYXJk
+d2FyZSBpcyBsb25nIG9ic29sZXRlLCByZW1vdmluZyB0aGUgZHJpdmVyIGlzIHRoZSBtb3N0IHBy
+YWdtYXRpYyBzb2x1dGlvbi4gSXQgZWxpbWluYXRlcyBkZWFkIGNvZGUsIGRyb3BzIHRoZSBtYWlu
+dGVuYW5jZSBidXJkZW4sIGFuZCBuYXR1cmFsbHkgcmVzb2x2ZXMgdGhpcyBmdXp6aW5nIHJvYWRi
+bG9jay4KCldvdWxkIHlvdSBwcmVmZXIgSSBzdWJtaXQgYSBwYXRjaCB0aGF0IGVudGlyZWx5IHJl
+bW92ZXMgYGRyaXZlcnMvbmV0L2V0aGVybmV0L3BhY2tldGVuZ2luZXMvaGFtYWNoaS5jYCBhbmQg
+aXRzIGFzc29jaWF0ZWQgS2NvbmZpZy9NYWtlZmlsZSBlbnRyaWVzLCBvciB3aWxsIHRoZSBtYWlu
+dGFpbmVycyB0YWtlIGl0IGZyb20gaGVyZT8KCkJlc3QgcmVnYXJkcywKTWluZ3l1IFdhbmcKCgo+
+IC0tLS0t5Y6f5aeL6YKu5Lu2LS0tLS0KPiDlj5Hku7bkuro6ICJBbmRyZXcgTHVubiIgPGFuZHJl
+d0BsdW5uLmNoPgo+IOWPkemAgeaXtumXtDoyMDI2LTA0LTIxIDIwOjUzOjI3ICjmmJ/mnJ/kuowp
+Cj4g5pS25Lu25Lq6OiDnjovmmI7nhZwgPDI1MTgxMjE0MjE3QHN0dS54aWRpYW4uZWR1LmNuPgo+
+IOS4u+mimDogUmU6IFJlOiBSZTogW1BBVENIXSBuZXQ6IGhhbWFjaGk6IGZpeCBkaXZpZGUgYnkg
+emVybyBpbiBoYW1hY2hpX2luaXRfb25lCj4gCj4gPiAxLiBWaXJ0dWFsaXphdGlvbiAmIEhvdHBs
+dWdnaW5nOiBJbiBRRU1VLWVtdWxhdGVkIGVudmlyb25tZW50cyBvcgo+ID4gY2xvdWQgaW5mcmFz
+dHJ1Y3R1cmVzLCB2aXJ0dWFsIFBDSSBkZXZpY2VzIGNhbiBiZSBkeW5hbWljYWxseQo+ID4gYXR0
+YWNoZWQuIEFuIHVudHJ1c3RlZCBndWVzdCBvciBhIGNvbXByb21pc2VkIGVtdWxhdGlvbiBsYXll
+ciBjb3VsZAo+ID4gdHJpZ2dlciB0aGlzIGV4Y2VwdGlvbi4gQXMgc2hvd24gaW4gdGhlIGRldGFp
+bGVkIGNyYXNoIGxvZyBbMV0sIHRoaXMKPiA+IHVuaGFuZGxlZCBleGNlcHRpb24gcmVzdWx0cyBp
+biBhIEtBU0FOIHNsYWItb3V0LW9mLWJvdW5kcyBkdXJpbmcgdGhlCj4gPiBtb2R1bGUgaW5pdCBw
+YXRoLCBsZWFkaW5nIHRvIGEgc29mdCBsb2NrdXAgb2YgdGhlIGhvc3QvZ3Vlc3QuCj4gCj4gRG9l
+cyBhbnlib2R5IGFjdHVhbGx5IGNhcmU/IEkgZG9uJ3QgdHJ1c3QgYSBWTSBpZiBpIGRvbid0IHRy
+dXN0IHRoZQo+IGhvc3Qgb2YgdGhlIFZNLiBJbiBvcmRlciB0byBkbyB0aGlzIHNvcnQgb2YgYXR0
+YWNrLCB5b3UgbmVlZCB0bwo+IGNvbXByb21pc2UgdGhlIFZNIGhvc3QsIHdoaWNoIGFscmVhZHkg
+bWVhbnMgaXQgaXMgZ2FtZSBvdmVyLgo+IAo+ID4gMi4gRnV6emluZyBSb2FkYmxvY2tzOiBUaGlz
+IGRpdmlkZS1ieS16ZXJvIGlzIGEgZnJlcXVlbnQgInJvYWRibG9jayIKPiA+IGZvciBhdXRvbWF0
+ZWQgZnV6emVycyBsaWtlIHN5emthbGxlci4KPiAKPiBNYWtlIGEgYmV0dGVyIGZ1enplcj8gSWYg
+dGhpcyBoYXBwZW5zIGEgbG90LCB3aHkgbm90IHRlYWNoIGl0IGhvdyB0bwo+IGF2b2lkIHRoZSBw
+cm9ibGVtPwo+IAo+IEJ1dCB3aHkgd291bGQgeW91IHdhbnQgdG8gZnV6IGEgZGV2aWNlIHdoaWNo
+IG5vYm9keSBoYXMgYW55IG1vcmU/ICBXZQo+IGFyZSBwcm9iYWJseSBqdXN0IGdvaW5nIHRvIGRl
+bGV0ZSB0aGUgd2hvbGUgZHJpdmVyLgo+IAo+ICAgICBBbmRyZXcK
+
+
+
+Hi Andrew,
+
+You make a fair point regarding the threat model. I agree that requiring host-level control to inject malicious emulated PCI devices makes this impractical as a real-world exploit. 
+
+To give some context on why this was triggered: we are not targeting the Hamachi device specifically. We are currently running a broad, automated fuzzing campaign across all PCI/PCIe drivers in the kernel tree to stress-test the driver core and error-handling paths. Hamachi was tested simply because it gets built in generic configurations like `allyesconfig`.
+
+That being said, I completely agree with your suggestion. If the hardware is long obsolete, removing the driver is the most pragmatic solution. It eliminates dead code, drops the maintenance burden, and naturally resolves this fuzzing roadblock.
+
+Would you prefer I submit a patch that entirely removes `drivers/net/ethernet/packetengines/hamachi.c` and its associated Kconfig/Makefile entries, or will the maintainers take it from here?
+
+Best regards,
+Mingyu Wang
+
+
+> -----原始邮件-----
+> 发件人: "Andrew Lunn" <andrew@lunn.ch>
+> 发送时间:2026-04-21 20:53:27 (星期二)
+> 收件人: 王明煜 <25181214217@stu.xidian.edu.cn>
+> 主题: Re: Re: Re: [PATCH] net: hamachi: fix divide by zero in hamachi_init_one
+> 
+> > 1. Virtualization & Hotplugging: In QEMU-emulated environments or
+> > cloud infrastructures, virtual PCI devices can be dynamically
+> > attached. An untrusted guest or a compromised emulation layer could
+> > trigger this exception. As shown in the detailed crash log [1], this
+> > unhandled exception results in a KASAN slab-out-of-bounds during the
+> > module init path, leading to a soft lockup of the host/guest.
+> 
+> Does anybody actually care? I don't trust a VM if i don't trust the
+> host of the VM. In order to do this sort of attack, you need to
+> compromise the VM host, which already means it is game over.
+> 
+> > 2. Fuzzing Roadblocks: This divide-by-zero is a frequent "roadblock"
+> > for automated fuzzers like syzkaller.
+> 
+> Make a better fuzzer? If this happens a lot, why not teach it how to
+> avoid the problem?
+> 
+> But why would you want to fuz a device which nobody has any more?  We
+> are probably just going to delete the whole driver.
+> 
+>     Andrew
+
