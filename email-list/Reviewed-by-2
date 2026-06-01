@@ -1,0 +1,68 @@
+Received: from vps0.lunn.ch (unknown [156.67.10.101])
+	by hzbj-edu-front-4.icoremail.net (Coremail) with SMTP id BrQMCkC2XrpYx+hpwvqzAQ--.13389S2;
+	Wed, 22 Apr 2026 21:04:24 +0800 (CST)
+Received: from vps0.lunn.ch (unknown [156.67.10.101])
+	by oracle-mxproxy-4 (Coremail) with SMTP id AQAAfwCHjblVx+hp2U0PAA--.838S3;
+	Wed, 22 Apr 2026 21:04:21 +0800 (CST)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=lunn.ch;
+	s=20171124; h=In-Reply-To:Content-Disposition:Content-Type:MIME-Version:
+	References:Message-ID:Subject:Cc:To:From:Date:From:Sender:Reply-To:Subject:
+	Date:Message-ID:To:Cc:MIME-Version:Content-Type:Content-Transfer-Encoding:
+	Content-ID:Content-Description:Content-Disposition:In-Reply-To:References;
+	bh=msVM0Z7nWQ/M2JHQQDaKFBklUSOvhst7cLU997D7X1g=; b=E2ttJwcnxR4bUgm3e0XYP+NZ4b
+	NWEPfgCfatWH9L12T1gxzJ10EYWXDoIRafhJh6i27JAlTaHHCVGj52SpjEomr5KsnEi15J05ldd8q
+	5hN2+MR6+OP7uaRCGdX6kgXr/O1kYHkF/MSTHGecwccFkdE+g/+DPF8MvorxfF0xexok=;
+Received: from andrew by vps0.lunn.ch with local (Exim 4.94.2)
+	(envelope-from <andrew@lunn.ch>)
+	id 1wFXFd-00H26c-5G; Wed, 22 Apr 2026 15:04:21 +0200
+Date: Wed, 22 Apr 2026 15:04:21 +0200
+From: Andrew Lunn <andrew@lunn.ch>
+To: Mingyu Wang <25181214217@stu.xidian.edu.cn>
+Cc: andrew+netdev@lunn.ch, davem@davemloft.net, edumazet@google.com,
+	kuba@kernel.org, pabeni@redhat.com, tglx@kernel.org,
+	mingo@kernel.org, netdev@vger.kernel.org,
+	linux-kernel@vger.kernel.org
+Subject: Re: [PATCH 2/2] net: packetengines: remove obsolete yellowfin driver
+ and vendor dir
+Message-ID: <5e8e2117-e183-4eaa-8946-3f077e528b57@lunn.ch>
+References: <20260422044820.485660-1-25181214217@stu.xidian.edu.cn>
+ <20260422044820.485660-3-25181214217@stu.xidian.edu.cn>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <20260422044820.485660-3-25181214217@stu.xidian.edu.cn>
+X-CM-TRANSID:AQAAfwCHjblVx+hp2U0PAA--.838S3
+Authentication-Results: hzbj-edu-front-4.icoremail.net; spf=pass smtp.
+	mail=andrew@lunn.ch; dkim=pass header.i=@lunn.ch
+X-Coremail-Antispam: 1UD129KBjvdXoW5Kw4rJF1xur15Cryrur13twb_yoWxGwcE9w
+	1Yq3Z7Kw1qkFy8Jw4xJFnrZ34FkF4Ivr9Fq3s0qw4aq3sFvFWDJF4rJr15Wa1xAa9rur1D
+	Ar45ur43Cr1jvjkaLaAFLSUrUUUUjb8apTn2vfkv8UJUUUU8Yxn0WfASr-VFAUDa7-sFnT
+	9fnUUIcSsGvfJTRUUUbcAYjsxI4VW3JwAYFVCjjxCrM7AC8VAFwI0_Jr0_Gr1l1IIY67AE
+	w4v_Jr0_Jr4l8cAvFVCFI7AF0xCrM28CjxkF64kEwVA0rcxSw2x7M28EF7xvwVC0I7IYx2
+	IY67AKxVWUJVWUCwA2z4x0Y4vE2Ix0cI8IcVCY1x0267AKxVWUJVW8JwA2z4x0Y4vEx4A2
+	jsIE14v26r1j6r4UM28EF7xvwVC2z280aVCY1x0267AKxVWUJVW8JwAS0I0E0xvYzxvE52
+	x082IY62kv0487Mc02F40EFcxC0VAKzVAqx4xG6I80ewAv7VC0I7IYx2IY67AKxVWUGVWU
+	XwAv7VC2z280aVAFwI0_Jr0_Gr1lOx8S6xCaFVCjc4AY6r1j6r4UM4x0x7Aq67IIx4CEVc
+	8vx2IErcIFxwCjxxvEa2IrMxkIecxEwVAF5wCY0x0Ix7I2Y4AK64vIr41lcIIF0xvE2Ix0
+	cI8IcVAFwI0_Jr0_JF4lcIIF0xvE2Ix0cI8IcVCY1x0267AKxVWUJVW8JwCYIxAIcVC2z2
+	80aVAFwI0_Jr0_Gr1lcIIF0xvEx4A2jsIEc7CjxVAFwI0_Jr0_Gr1l42xK82IYc2Ij64vI
+	r41l4x8a6x804xWl4I8I3I0E4IkC6x0Yz7v_Jr0_Gr1lx2IqxVAqx4xG67AKxVWUJVWUGw
+	C20s026x8GjcxK67AKxVWUGVWUWwC2zVAF1VAY17CE14v26r1q6r43MIIYrxkI7VAKI48J
+	MIIF0xvE42xK8VAvwI8IcIk0rVWUJVWUCbIYCTnIWIevJa73UjIFyTuYvj4R9J5YDUUUU
+
+On Wed, Apr 22, 2026 at 12:48:20PM +0800, Mingyu Wang wrote:
+> Similar to the hamachi driver, the yellowfin driver supports hardware
+> that is over two decades old and no longer in active use.
+> 
+> Since yellowfin was the last remaining driver in the packetengines
+> vendor directory, we can now safely remove the entire directory and
+> drop its associated references from the parent Kconfig and Makefile.
+> 
+> This eliminates dead code and reduces the overall maintenance burden
+> on the netdev subsystem.
+> 
+> Signed-off-by: Mingyu Wang <25181214217@stu.xidian.edu.cn>
+
+Reviewed-by: Andrew Lunn <andrew@lunn.ch>
+
+    Andrew
