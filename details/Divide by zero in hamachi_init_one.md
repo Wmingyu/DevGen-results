@@ -1,7 +1,8 @@
-# 🐛 NULL ptr deref in amd64_fetch_size()
+# 🐛 Divide by zero in hamachi_init_one
 
 ## 📌 Overview
-* **Location:** `drivers/char/agp/amd64-agp.c`
+
+* **Location:** `drivers/net/ethernet/packetengines/hamachi.c`
 * **Current Status:** 👀 **Confirmed**
 * **Notes:** Caused by a flawed ternary operator check on the PCIClkMeas register.
 
@@ -20,3 +21,4 @@ This section tracks the complete email correspondence and patch history for this
 | Re: [PATCH] net: hamachi: fix divide by zero in hamachi_init_one | <u>[lore.kernel.org](https://github.com/Wmingyu/DevGen-results/blob/main/email-list/3_Re%3A%20Re%3A%20Re%3A%20%5BPATCH%5D%20net%3A%20hamachi%3A%20fix%20divide%20by%20zero%20in%20hamachi_init_one)</u> |
 | Re: Re: [PATCH] net: hamachi: fix divide by zero in hamachi_init_one | <u>[lore.kernel.org](https://github.com/Wmingyu/DevGen-results/blob/main/email-list/4_Re%3A%20Re%3A%20Re%3A%20%5BPATCH%5D%20net%3A%20hamachi%3A%20fix%20divide%20by%20zero%20in%20hamachi_init_one)</u> |
 | Re: [PATCH] net: hamachi: fix divide by zero in hamachi_init_one | <u>[lore.kernel.org](https://github.com/Wmingyu/DevGen-results/blob/main/email-list/5_Re%3A%20Re%3A%20Re%3A%20%5BPATCH%5D%20net%3A%20hamachi%3A%20fix%20divide%20by%20zero%20in%20hamachi_init_one)</u> |
+
