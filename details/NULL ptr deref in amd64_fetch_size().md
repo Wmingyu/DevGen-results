@@ -1,0 +1,20 @@
+# 🐛 NULL ptr deref in amd64_fetch_size()
+
+## 📌 Overview
+* **Location:** `drivers/char/agp/amd64-agp.c`
+* **Current Status:** 👀 **Confirmed** 💬 **Needs Reply**
+* **Notes:** A missing NULL check for `node_to_amd_nb(0)` causes a kernel panic in mixed or emulated environments.
+
+## 🔗 Mailing List Threads & Timeline
+
+This section tracks the complete email correspondence and patch history for this vulnerability.
+
+| Description                                                  | Link                                                         |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [PATCH] agp: amd64: fix null-ptr-deref in amd64_fetch_size   | <u>[lore.kernel.org](https://lore.kernel.org/all/20260429022548.37070-1-25181214217@stu.xidian.edu.cn/)</u> |
+| [PATCH] char: agp: amd64 - fix null-ptr-deref in amd64_fetch_size and related functions | <u>[lore.kernel.org](https://lore.kernel.org/all/20260504065441.99033-1-w15303746062@163.com/)</u> |
+| Re: [PATCH] char: agp: amd64 - fix null-ptr-deref in amd64_fetch_size and related functions | <u>[lore.kernel.org](https://lore.kernel.org/all/20260504073407.A8A35C2BCB8@smtp.kernel.org/)</u> |
+| [PATCH v2] char: agp: amd64 - fix broken error propagation in agp_amd64_probe() | <u>[lore.kernel.org](https://lore.kernel.org/all/20260504074823.99377-1-w15303746062@163.com/)</u> |
+|                                                              |                                                              |
+|                                                              |                                                              |
+
