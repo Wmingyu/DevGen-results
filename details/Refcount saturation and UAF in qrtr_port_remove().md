@@ -1,0 +1,16 @@
+# 🐛 Refcount saturation and UAF in qrtr_port_remove()
+
+## 📌 Overview
+* **Location:** `net/qrtr/af_qrtr.c`
+* **Current Status:** 🆕 **Reported** 🛠️ **Patch Sent**
+* **Notes:** A race condition in `qrtr_port_remove()` occurs because the socket reference count is decremented before the port is removed from the XArray and before the RCU grace period elapses. This allows a concurrent RCU reader to obtain the socket and attempt to increment a zeroed refcount, leading to saturation and a potential Use-After-Free. Fixed by deferring `sock_put()` until after `xa_erase()` and `synchronize_rcu()` complete.
+
+## 🔗 Mailing List Threads & Timeline
+
+This section tracks the complete email correspondence and patch history for this vulnerability.
+
+| Description                                                  | Link                                                         |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [PATCH] net: qrtr: fix refcount saturation and potential UAF in qrtr_port_remove | <u>[lore.kernel.org](https://lore.kernel.org/all/20260530082243.1123402-1-w15303746062@163.com/)</u> |
+|                                                              |                                                              |
+
