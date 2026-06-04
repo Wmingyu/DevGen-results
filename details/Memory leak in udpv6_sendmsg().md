@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 * **Location:** `net/ipv6/udp.c`
-* **Current Status:** 🔄 **Already Fixed**
+* **Current Status:** 👀**Confirmed** 🔄**Indirectly Fixed**
 * **Notes:** Unconsumed `dst_entry` reference caused a memory leak when `ip6_make_skb()` fails early.
 
 ## 🔗 Mailing List Threads & Timeline
