@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `drivers/i2c/busses/i2c-i801.c`
-* **Current Status:** 👀 **Confirmed** 💬 **Needs Reply**
+* **Current Status:** 👀 **Confirmed** 🛠️**Patch Sent**
 * **Notes:** An unconditional hardware register cleanup in the error path of `i801_access()` forcefuly clears the `INUSE_STS` lock without owning the controller. This interrupts BIOS/ACPI transactions, corrupts the hardware state machine, and triggers a console livelock/Hung Task panic. Fixed by introducing a safe `out_err` bypass.
 
 ## 🔗 Mailing List Threads & Timeline
