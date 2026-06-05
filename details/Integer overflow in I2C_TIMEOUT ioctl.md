@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 * **Location:** `drivers/i2c/i2c-dev.c`
-* **Current Status:** ✅ **Merged**
+* **Current Status:** ✅ **Accepted**
 * **Notes:** A missing bounds check before multiplying the user-provided timeout by 10 causes an integer overflow, leading to a negative timeout value and triggering a local DoS (SMBus state machine corruption).
 
 ## 🔗 Mailing List Threads & Timeline
