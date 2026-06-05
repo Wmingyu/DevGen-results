@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 * **Location:** `drivers/gpu/drm/vkms/vkms_crtc.c`
-* **Current Status:**  🆕 **Reported** 🔄 **Indirectly Fixed**
+* **Current Status:**  🔄 **Indirectly Fixed**
 * **Notes:** A lack of bounds checking on display mode parameters allows user-space to pass a malicious mode (e.g., massive `crtc_clock` and tiny `htotal`/`vtotal`). This causes the calculated vblank timer period to approach zero, triggering an hrtimer interrupt storm that deadlocks the CPU (RCU stall). Fixed by rejecting display modes in `vkms_crtc_atomic_check()` that result in an implied refresh rate greater than 1000 Hz.
 
 ## 🔗 Mailing List Threads & Timeline
