@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 * **Location:** `drivers/bluetooth/hci_ldisc.c`
-* **Current Status:** ✅ **Merged**
+* **Current Status:** ✅ **Accepted**
 * **Notes:** A complex series of Use-After-Free (UAF) and Null Pointer Dereference (NPD) vulnerabilities caused by flawed lifecycle management and race conditions in the HCI UART driver. The issues occurred during concurrent TTY hangup and initialization, leading to double-frees of `tx_skb` and premature freeing of the `hu` and `hdev` structs. Fixed by strictly re-ordering flag clearance (`HCI_UART_PROTO_READY`), `cancel_work_sync()`, and protocol `close()` callbacks across all initialization and teardown paths.
 
 ## 🔗 Mailing List Threads & Timeline
