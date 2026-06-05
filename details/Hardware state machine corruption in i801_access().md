@@ -15,6 +15,6 @@ This section tracks the complete email correspondence and patch history for this
 | [PATCH] i2c: i801: fix hardware state machine corruption in error path | <u>[lore.kernel.org](https://lore.kernel.org/all/20260507114356.247525-1-w15303746062@163.com/#r)</u> |
 | Re: [PATCH] i2c: i801: fix hardware state machine corruption in error path | <u>[lore.kernel.org](https://lore.kernel.org/all/20260512103809.7d5008d7@endymion/)</u> |
 | [PATCH v2] i2c: i801: fix hardware state machine corruption in error path | <u>[lore.kernel.org](https://lore.kernel.org/all/20260512093534.348655-1-w15303746062@163.com/)</u> |
-| Re:[PATCH v2] i2c: i801: fix hardware state machine corruption in error path | <u>[lore.kernel.org](https://lore.kernel.org/all/47aa218a.9e42.19e928ecb94.Coremail.w15303746062@163.com/)</u> |
+| Ping:Re:[PATCH v2] i2c: i801: fix hardware state machine corruption in error path | <u>[lore.kernel.org](https://lore.kernel.org/all/47aa218a.9e42.19e928ecb94.Coremail.w15303746062@163.com/)</u> |
 
 https://github.com/intel-lab-lkp/linux/commit/e67d702846114f60080991d51966d486b1615b49 
