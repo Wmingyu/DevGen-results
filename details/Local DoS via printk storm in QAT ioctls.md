@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 * **Location:** `drivers/crypto/intel/qat/qat_common/adf_ctl_drv.c`
-* **Current Status:** ✅ **Merged**
+* **Current Status:** ✅ **Accepted**
 * **Notes:** A malicious user could trigger a printk storm by repeatedly passing invalid pointers or unknown commands to QAT ioctls. This caused RCU stalls and soft lockups (Local DoS) on environments with slow serial consoles. Fixed by removing unconditional error prints in user-copy failure paths.
 
 ## 🔗 Mailing List Threads & Timeline
