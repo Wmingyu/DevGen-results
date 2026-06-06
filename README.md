@@ -48,7 +48,7 @@ Welcome to my Kernel Bug Tracker repository! This repository serves as an open r
 | #022 | `net/qrtr/af_qrtr.c`                             | [Refcount saturation and UAF in qrtr_port_remove()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Refcount%20saturation%20and%20UAF%20in%20qrtr_port_remove().md) | 👀**Confirmed**<br>🛠️ **Patch Sent**                     |
 | #023 | `drivers/gpu/drm/drm_gem.c`                      | [Refcount saturation and UAF in qrtr_port_remove()](https://github.com/Wmingyu/DevGen-results/blob/main/details/WARNING%20in%20idr_alloc%20via%20drm_gem_change_handle_ioctl.md) | 👀 **Confirmed**                                        |
 | #024 | `drivers/crypto/intel/qat/qat_common/adf_init.c` | [Use-After-Free in adf_dev_up()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Use-After-Free%20in%20adf_dev_up().md) | 👀 **Confirmed**                                        |
-| #025 |                                                  |                                                              |                                                        |
+| #025 | `drivers/net/wireless/mac80211_hwsim.c`          | [Context-recursion deadlock in mac80211_hwsim](https://github.com/Wmingyu/DevGen-results/blob/main/details/Context-recursion%20deadlock%20in%20mac80211_hwsim.md) | 👀**Confirmed**<br/>🔄 **Indirectly Fixed**              |
 | #026 |                                                  |                                                              |                                                        |
 
 
