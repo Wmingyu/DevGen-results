@@ -18,3 +18,4 @@ This section tracks the complete email correspondence and patch history for this
 | Ping:Re:[PATCH v2] i2c: i801: fix hardware state machine corruption in error path | <u>[lore.kernel.org](https://lore.kernel.org/all/47aa218a.9e42.19e928ecb94.Coremail.w15303746062@163.com/)</u> |
 
 https://github.com/intel-lab-lkp/linux/commit/e67d702846114f60080991d51966d486b1615b49 
+https://patchwork.ozlabs.org/project/linux-i2c/patch/20260512093534.348655-1-w15303746062@163.com/ 
