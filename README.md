@@ -46,4 +46,10 @@ Welcome to my Kernel Bug Tracker repository! This repository serves as an open r
 | #020 | `gpu/drm/vkms/vkms_crtc.c`                  | [Hrtimer livelock via unvalidated display mode](https://github.com/Wmingyu/DevGen-results/blob/main/details/Hrtimer%20livelock%20via%20unvalidated%20display%20mode.md) | 🔄 **Indirectly Fixed**                                 |
 | #021 | `gpu/drm/drm_prime.c`                       | [rb_tree corruption in drm_prime_remove_buf_handle()](https://github.com/Wmingyu/DevGen-results/blob/main/details/rb_tree%20corruption%20in%20drm_prime_remove_buf_handle().md) | 👀 **Confirmed**<br>❌ **WontFix**<br><sub>On Hold</sub> |
 | #022 | `net/qrtr/af_qrtr.c`                        | [Refcount saturation and UAF in qrtr_port_remove()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Refcount%20saturation%20and%20UAF%20in%20qrtr_port_remove().md) | 👀**Confirmed**<br>🛠️ **Patch Sent**                     |
+| #023 | `drivers/gpu/drm/drm_gem.c`                 | [Refcount saturation and UAF in qrtr_port_remove()](https://github.com/Wmingyu/DevGen-results/blob/main/details/WARNING%20in%20idr_alloc%20via%20drm_gem_change_handle_ioctl.md) | 👀 **Confirmed**                                        |
+| #024 |                                             |                                                              |                                                        |
+| #025 |                                             |                                                              |                                                        |
+| #026 |                                             |                                                              |                                                        |
+
+
 
