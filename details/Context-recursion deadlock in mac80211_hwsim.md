@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 * **Location:** `drivers/net/wireless/mac80211_hwsim.c`
-* **Current Status:**  👀 **Confirmed** 🔄**Indirectly Fixed**
+* **Current Status:**  👀 **Bug Confirmed** 🔄**Indirectly Fixed**
 * **Notes:** An RCU CPU stall occurs on CPU 0 during a `clone()` syscall. The root cause is a context-recursion deadlock: a timer softirq interrupts the process context and invokes `mac80211_hwsim_beacon`, which then attempts to acquire a spinlock in `mac80211_hwsim_tx_frame_no_nl()` without properly disabling bottom halves (missing `spin_lock_bh`). The kernel maintainer confirmed the bug and noted that a patch for this specific missing BH disable had recently been merged upstream.
 
 ## 🔗 Mailing List Threads & Timeline
