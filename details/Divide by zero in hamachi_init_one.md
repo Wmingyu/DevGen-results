@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `drivers/net/ethernet/packetengines/hamachi.c`
-* **Current Status:** 👀 **Confirmed**
+* **Current Status:** 👀 **Bug Confirmed**
 * **Notes:** Caused by a flawed ternary operator check on the PCIClkMeas register.
 
 ## 🔗 Mailing List Threads & Timeline
