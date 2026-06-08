@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 * **Location:** `drivers/gpu/drm/drm_prime.c`
-* **Current Status:** 👀 **Confirmed** ❌ **WontFix**
+* **Current Status:** 👀 **Bug Confirmed** ❌ **WontFix**
 * **Notes:** A lack of mutex synchronization in the deletion path of `drm_prime_remove_buf_handle()` causes the `handles` and `dmabufs` rb_trees to become corrupted under concurrent operations. This leads to orphaned members and triggers a kernel panic via a `WARNING` in `drm_prime_destroy_file_private()`. Fixed by holding the `prime_fpriv->lock` during lookup and erasure, while safely deferring the memory cleanup (`dma_buf_put` and `kfree`) outside the lock to avoid deadlocks.
 
 ## 🔗 Mailing List Threads & Timeline
