@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 * **Location:** `drivers/gpu/drm/vkms/vkms_crtc.c`
-* **Current Status:** ✅ **Accepted**
+* **Current Status:** ✅ **Patch Accepted**
 * **Notes:** An ABBA deadlock occurs between `drm_vblank_disable_and_save()` and the `vkms_vblank_simulate()` hrtimer callback, causing an RCU preempt stall. Fixed by replacing `hrtimer_cancel()` with `hrtimer_try_to_cancel()` to safely abort the timer and prevent infinite spinning
 
 ## 🔗 Mailing List Threads & Timeline
