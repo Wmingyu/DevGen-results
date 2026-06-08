@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 * **Location:** `drivers/gpu/drm/drm_gem.c`
-* **Current Status:** 👀 **Confirmed**  [CVE-2026-23149](https://www.cve.org/CVERecord?id=CVE-2026-23149)
+* **Current Status:** 👀 **Bug Confirmed**  [CVE-2026-23149](https://www.cve.org/CVERecord?id=CVE-2026-23149)
 * **Notes:** A `WARNING` is triggered in `idr_alloc()` (lib/idr.c) when `drm_gem_change_handle_ioctl()` attempts to allocate or modify a GEM handle. This is likely caused by a lack of proper bounds checking on user-supplied values from the IOCTL, allowing an invalid or negative starting range to be passed directly to the IDR allocator.
 
 ## 🔗 Mailing List Threads & Timeline
