@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 * **Location:** `drivers/watchdog/wdt_pci.c`
-* **Current Status:** 👀 **Confirmed** ❌ **WontFix**
+* **Current Status:** 👀 **Bug Confirmed** ❌ **WontFix**
 * **Notes:** A missing interrupt origin check in a shared IRQ handler causes `wdtpci_interrupt()` to erroneously process interrupts from other devices. Under heavy load, this defeats the kernel's spurious interrupt detector, leading to a massive printk storm, RCU/Hung Task panics, and a complete system lockup. Fixed by checking the `WDC_SR_IRQ` bit in the status register and returning `IRQ_NONE` when appropriate.
 
 ## 🔗 Mailing List Threads & Timeline
