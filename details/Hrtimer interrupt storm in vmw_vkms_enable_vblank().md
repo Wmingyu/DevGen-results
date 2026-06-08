@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `drivers/gpu/drm/vmwgfx/vmwgfx_vkms.c`
-* **Current Status:** 👀 **Confirmed** 🛠️ **Patch Sent**
+* **Current Status:** 👀 **Bug Confirmed** 🛠️ **Patch Sent**
 * **Notes:** Submitting a malicious display mode with a massive pixel clock and small resolution causes integer truncation in `drm_calc_timestamping_constants()`, resulting in a 0-ns frame duration. This completely starves the CPU in an infinite hrtimer hard-IRQ loop (`vkms_vblank_simulate()`), leading to severe RCU stalls and a system lockup. Fixed by adding a defensive sanity check to reject 0-period vblanks.
 
 ## 🔗 Mailing List Threads & Timeline
