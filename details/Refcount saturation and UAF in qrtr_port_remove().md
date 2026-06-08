@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `net/qrtr/af_qrtr.c`
-* **Current Status:**  👀 **Confirmed**  🛠️ **Patch Sent**
+* **Current Status:**  👀 **Bug Confirmed**  🛠️ **Patch Sent**
 * **Notes:** A race condition in `qrtr_port_remove()` occurs because the socket reference count is decremented before the port is removed from the XArray and before the RCU grace period elapses. This allows a concurrent RCU reader to obtain the socket and attempt to increment a zeroed refcount, leading to saturation and a potential Use-After-Free. Fixed by deferring `sock_put()` until after `xa_erase()` and `synchronize_rcu()` complete.
 
 ## 🔗 Mailing List Threads & Timeline
