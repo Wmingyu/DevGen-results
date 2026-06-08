@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `drivers/gpu/drm/ast/ast_2500.c`
-* **Current Status:** 👀 **Confirmed** 🛠️ **Patch Sent**
+* **Current Status:** 👀 **Bug Confirmed** 🛠️ **Patch Sent**
 * **Notes:** A critical lack of timeout mechanisms in hardware polling loops (`ast_2500_patch_ahb` and `__ast_mindwm`) causes an infinite loop when the hardware is unresponsive. This leads to a severe CPU soft lockup (143s+) and complete system paralysis. 
 
 ## 🔗 Mailing List Threads & Timeline
