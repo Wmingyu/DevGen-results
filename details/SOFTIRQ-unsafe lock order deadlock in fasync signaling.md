@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 * **Location:** `fs/fcntl.c`
-* **Current Status:** ✅ **Accepted** **(vfs-7.2.misc branch)**
+* **Current Status:** ✅ **Patch Accepted** **(vfs-7.2.misc branch)**
 * **Notes:** A SOFTIRQ-safe to SOFTIRQ-unsafe lock order deadlock in `send_sigio()` and `send_sigurg()`. When FASYNC is configured for a process group, taking `read_lock(&tasklist_lock)` in softirq context (e.g., during TCP URG packet reception) can deadlock against process-context writers due to rwlock fairness. Fixed by replacing the `tasklist_lock` with `rcu_read_lock()`, which also mitigates a potential remote DoS vector.
 
 ## 🔗 Mailing List Threads & Timeline
