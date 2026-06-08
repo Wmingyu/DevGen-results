@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `drivers/gpu/drm/drm_gem.c`
-* **Current Status:**  👀**Confirmed**  🛠️ **Patch Sent**
+* **Current Status:**  👀**Bug Confirmed**  🛠️ **Patch Sent**
 * **Notes:** A missing check for negative user handles bypasses upper-bound validation, triggering a `WARN_ON_ONCE` inside `idr_alloc()`.
 
 ## 🔗 Mailing List Threads & Timeline
