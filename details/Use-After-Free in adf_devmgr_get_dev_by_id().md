@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 * **Location:** `drivers/crypto/intel/qat/qat_common/adf_dev_mgr.c`
-* **Current Status:** ✅ **Accepted**
+* **Current Status:** ✅ **Patch Accepted**
 * **Notes:** A missing reference count increment in `adf_devmgr_get_dev_by_id()` leads to a Use-After-Free (UAF) vulnerability during concurrent ioctl operations and device removal. Fixed by properly leveraging `atomic_inc()` and `atomic_dec()` for `ref_count`.
 
 ## 🔗 Mailing List Threads & Timeline
