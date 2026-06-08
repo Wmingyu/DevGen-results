@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `drivers/video/fbdev/core/fbcon.c`
-* **Current Status:** 🆕 **Reported** 🛠️ **Patch Sent**
+* **Current Status:** 🆕 **Bug Reported** 🛠️ **Patch Sent**
 * **Notes:** A flawed error path in `fbcon_do_set_font()` skips restoring the `userfont` state when attempting to set a default builtin font. This state corruption prevents `fbcon_free_font()` from freeing the previously allocated user font memory during console destruction. Fixed by unconditionally restoring the `userfont` state.
 
 ## 🔗 Mailing List Threads & Timeline
