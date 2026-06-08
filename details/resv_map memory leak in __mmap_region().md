@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 *  **Location:** `fs/hugetlbfs/inode.c` & `mm/vma.c`
-* **Current Status:** ✅ **Accepted**
+* **Current Status:** ✅ **Patch Accepted**
 * **Notes:** A regression introduced by the VMA iterator refactoring causes a `resv_map` memory leak when VMA creation fails during the `mmap_prepare` phase.
 
 ## 🔗 Mailing List Threads & Timeline
