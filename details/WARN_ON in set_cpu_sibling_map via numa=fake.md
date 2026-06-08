@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 * **Location:** `arch/x86/kernel/smpboot.c`
-* **Current Status:** 👀 **Confirmed**
+* **Current Status:** 👀 **Bug Confirmed**
 * **Notes:** The `numa=fake=N` parameter falsely triggers a topology consistency `WARN_ON_ONCE` because it artificially divides a single physical package into multiple software NUMA nodes.
 
 ## 🔗 Mailing List Threads & Timeline
