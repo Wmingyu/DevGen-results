@@ -1,6 +1,7 @@
 # 🐛 ABBA deadlock in vkms vblank timer
 
 ## 📌 Overview
+
 * **Location:** `drivers/gpu/drm/vkms/vkms_crtc.c`
 * **Current Status:** ✅ **Patch Accepted**
 * **Notes:** An ABBA deadlock occurs between `drm_vblank_disable_and_save()` and the `vkms_vblank_simulate()` hrtimer callback, causing an RCU preempt stall. Fixed by replacing `hrtimer_cancel()` with `hrtimer_try_to_cancel()` to safely abort the timer and prevent infinite spinning
@@ -28,4 +29,9 @@ This section tracks the complete email correspondence and patch history for this
 | Sasha:Re: [PATCH 6.18.y 0/5] drm/vkms: Backport generic vblank timer to fix ABBA deadlock | <u>[lore.kernel.org](https://github.com/Wmingyu/DevGen-results/blob/main/email-list/2_Re%20%5BPATCH%206.18.y%2005%5D%20drmvkms%20Backport%20generic%20vblank%20timer%20to%20fix%20ABBA%20deadlock.txt)</u> |
 | Maarten:Re: [PATCH 6.18.y 0/5] drm/vkms: Backport generic vblank timer to fix ABBA deadlock | <u>[lore.kernel.org](https://github.com/Wmingyu/DevGen-results/blob/main/email-list/3_Re%20%5BPATCH%206.18.y%2005%5D%20drmvkms%20Backport%20generic%20vblank%20timer%20to%20fix%20ABBA%20deadlock.txt)</u> |
 | Sasha:Re: [PATCH v2 6.18.y 0/5] drm/vkms: Backport generic vblank timer to fix ABBA deadlock | <u>[lore.kernel.org](https://github.com/Wmingyu/DevGen-results/blob/main/email-list/4_Re%20%5BPATCH%20v2%206.18.y%2005%5D%20drmvkms%20Backport%20generic%20vblank%20timer%20to%20fix%20ABBA%20deadlock.txt)</u> |
+| [PATCH 6.18 021/377] drm/vblank: Add vblank timer            | <u>[lore.kernel.org](https://github.com/Wmingyu/DevGen-results/blob/main/email-list/%5BPATCH%206.18%20021377%5D%20drmvblank%20Add%20vblank%20timer.txt)</u> |
+| [PATCH 6.18 022/377] drm/vblank: Add CRTC helpers for simple use cases | <u>[lore.kernel.org](https://github.com/Wmingyu/DevGen-results/blob/main/email-list/%5BPATCH%206.18%20022377%5D%20drmvblank%20Add%20CRTC%20helpers%20for%20simple%20use%20cases.txt)</u> |
+| [PATCH 6.18 023/377] drm/vkms: Convert to DRMs vblank timer  | <u>[lore.kernel.org](https://github.com/Wmingyu/DevGen-results/blob/main/email-list/%5BPATCH%206.18%20023377%5D%20drmvkms%20Convert%20to%20DRMs%20vblank%20timer.txt)</u> |
+| [PATCH 6.18 024/377] drm/atomic: Increase timeout in drm_atomic_helper_wait_for_vblanks() | <u>[lore.kernel.org](https://github.com/Wmingyu/DevGen-results/blob/main/email-list/%5BPATCH%206.18%20024377%5D%20drmatomic%20Increase%20timeout%20in%20drm_atomic_helper_wait_for_vblanks().txt)</u> |
+| [PATCH 6.18 025/377] drm/vblank: Fix kernel docs for vblank timer | <u>[lore.kernel.org](https://github.com/Wmingyu/DevGen-results/blob/main/email-list/%5BPATCH%206.18%20025377%5D%20drmvblank%20Fix%20kernel%20docs%20for%20vblank%20timer.txt)</u> |
 
