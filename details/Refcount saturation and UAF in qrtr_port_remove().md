@@ -18,5 +18,5 @@ This section tracks the complete email correspondence and patch history for this
 | [PATCH v2] net: qrtr: fix refcount saturation and potential UAF in qrtr_port_remove | <u>[lore.kernel.org](https://lore.kernel.org/all/20260604064801.1180388-1-w15303746062@163.com/)</u> |
 | AI Reviews:sashiko                                           | <u>[lore.kernel.org](https://sashiko.dev/#/patchset/20260604064801.1180388-1-w15303746062%40163.com)</u> |
 | Re: [PATCH v2] net: qrtr: fix refcount saturation and potential UAF in qrtr_port_remove | <u>[lore.kernel.org](https://lore.kernel.org/all/20260608131549.GI3920875@horms.kernel.org/)</u> |
-|                                                              |                                                              |
+| applied to netdev/net.git                                    | <u>[lore.kernel.org](https://lore.kernel.org/all/178097040939.1753037.3386694182969051861.git-patchwork-notify@kernel.org/)</u> |
 
