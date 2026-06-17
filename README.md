@@ -49,7 +49,7 @@ Welcome to my Kernel Bug Tracker repository! This repository serves as an open r
 | #023 | `drivers/gpu/drm/drm_gem.c`                      | [WARNING in idr_alloc via drm_gem_change_handle_ioctl](https://github.com/Wmingyu/DevGen-results/blob/main/details/WARNING%20in%20idr_alloc%20via%20drm_gem_change_handle_ioctl.md) | ✅ **Patch Accepted**<br/>[CVE-2026-23149](https://www.cve.org/CVERecord?id=CVE-2026-23149) |
 | #024 | `drivers/crypto/intel/qat/qat_common/adf_init.c` | [Use-After-Free in adf_dev_up()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Use-After-Free%20in%20adf_dev_up().md) | 👀 **Bug Confirmed**                                          |
 | #025 | `drivers/net/wireless/mac80211_hwsim.c`          | [Context-recursion deadlock in mac80211_hwsim](https://github.com/Wmingyu/DevGen-results/blob/main/details/Context-recursion%20deadlock%20in%20mac80211_hwsim.md) | 👀**Bug Confirmed**<br/>🔄 **Indirectly Fixed**                |
-| #026 |                                                  |                                                              |                                                              |
+| #026 | `drivers/i2c/busses/i2c-i801.c`                  | [Interrupt storm in i801_isr() via invalid block read size](https://github.com/Wmingyu/DevGen-results/blob/main/details/Interrupt%20storm%20in%20i801_isr()%20via%20invalid%20block%20read%20size.md) | 🆕 **Bug Reported**<br/>                                      |
 
 
 
