@@ -19,4 +19,5 @@ This section tracks the complete email correspondence and patch history for this
 | Re:[PATCH v2] char: agp: amd64 - fix broken error propagation in agp_amd64_probe() | <u>[lore.kernel.org](https://lore.kernel.org/all/71742084.a1c9.19e92c4425c.Coremail.w15303746062@163.com/)</u> |
 | Reviewed-Re: [PATCH v2] char: agp: amd64 - fix broken error propagation in agp_amd64_probe() | <u>[lore.kernel.org](https://github.com/Wmingyu/DevGen-results/blob/main/email-list/Review%20Re%20%5BPATCH%20v2%5D%20char%20agp%20amd64%20-%20fix%20broken%20error%20propagation%20in%20agp_amd64_probe().txt)</u> |
 | Applied to drm-misc-next-fixes for v7.2                      | <u>[lore.kernel.org](https://lore.kernel.org/all/aiZ5PomNR3ZoRzbM@wunner.de/)</u> |
+| agp/amd64: Fix broken error propagation in agp_amd64_probe() | <u>[lore.kernel.org](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b08472db93b1ccff84a7adec5779d47f0e9d3a30)</u> |
 
