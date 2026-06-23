@@ -50,8 +50,7 @@ Welcome to my Kernel Bug Tracker repository! This repository serves as an open r
 | #024 | `drivers/crypto/intel/qat/qat_common/adf_init.c` | [Use-After-Free in adf_dev_up()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Use-After-Free%20in%20adf_dev_up().md) | 👀 **Bug Confirmed**                                          |
 | #025 | `drivers/net/wireless/mac80211_hwsim.c`          | [Context-recursion deadlock in mac80211_hwsim](https://github.com/Wmingyu/DevGen-results/blob/main/details/Context-recursion%20deadlock%20in%20mac80211_hwsim.md) | 👀**Bug Confirmed**<br/>🔄 **Indirectly Fixed**                |
 | #026 | `drivers/i2c/busses/i2c-i801.c`                  | [Interrupt storm in i801_isr() via invalid block read size](https://github.com/Wmingyu/DevGen-results/blob/main/details/Interrupt%20storm%20in%20i801_isr()%20via%20invalid%20block%20read%20size.md) | 🆕 **Bug Reported**<br/>                                      |
-
-
+| #027 | `drivers/misc/ibmasm/module.c`                   | [Page fault via undersized PCI BAR 0 in ibmasm](https://github.com/Wmingyu/DevGen-results/blob/main/details/Page%20fault%20via%20undersized%20PCI%20BAR%200%20in%20ibmasm.md) | 🆕 **Bug Reported**<br/>🛠️ **Patch Sent**                      |
 
 ---
 
@@ -64,3 +63,4 @@ For transparency and independent verification of our upstream engagements, you c
 * 📧 [Zhi Wang - Search Results](https://lore.kernel.org/all/?q=%E7%8E%8B%E5%BF%97)
 
 > **Note:** These searches aggregate our patch submissions, bug reports, and technical discussions with kernel maintainers across various subsystem mailing lists.
+
