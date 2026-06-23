@@ -14,4 +14,5 @@ This section tracks the complete email correspondence and patch history for this
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
 | misc: ibmasm: Fix out-of-bounds MMIO access during module load | <u>[lore.kernel.org](https://lore.kernel.org/all/20260623070909.362260-1-w15303746062@163.com/)</u> |
 | Re: [PATCH] misc: ibmasm: Fix out-of-bounds MMIO access during module load | <u>[lore.kernel.org](https://lore.kernel.org/all/2026062354-crawfish-t-shirt-d45d@gregkh/)</u> |
+| [PATCH v2] misc: ibmasm: Fix static and dynamic out-of-bounds MMIO accesses | <u>[lore.kernel.org](https://lore.kernel.org/all/20260623114046.368089-1-w15303746062@163.com/)</u> |
 
