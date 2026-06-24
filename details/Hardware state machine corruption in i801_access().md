@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `drivers/i2c/busses/i2c-i801.c`
-* **Current Status:** 👀 **Bug Confirmed** 🛠️**Patch Sent**
+* **Current Status:** ✅ **Patch Accepted**
 * **Notes:** An unconditional hardware register cleanup in the error path of `i801_access()` forcefuly clears the `INUSE_STS` lock without owning the controller. This interrupts BIOS/ACPI transactions, corrupts the hardware state machine, and triggers a console livelock/Hung Task panic. Fixed by introducing a safe `out_err` bypass.
 
 ## 🔗 Mailing List Threads & Timeline
@@ -17,7 +17,7 @@ This section tracks the complete email correspondence and patch history for this
 | [PATCH v2] i2c: i801: fix hardware state machine corruption in error path | <u>[lore.kernel.org](https://lore.kernel.org/all/20260512093534.348655-1-w15303746062@163.com/)</u> |
 | Ping:Re:[PATCH v2] i2c: i801: fix hardware state machine corruption in error path | <u>[lore.kernel.org](https://lore.kernel.org/all/47aa218a.9e42.19e928ecb94.Coremail.w15303746062@163.com/)</u> |
 | Re: [PATCH v2] i2c: i801: fix hardware state machine corruption in error path | <u>[lore.kernel.org](https://lore.kernel.org/all/aicfiAEdlbGmKIAU@zenone.zhora.eu/)</u> |
-|                                                              |                                                              |
+| Re: [PATCH v2] i2c: i801: fix hardware state machine corruption in error path | <u>[lore.kernel.org](https://lore.kernel.org/all/ajqtEIAX_D5z_UW5@zenone.zhora.eu/)</u> |
 
 https://github.com/intel-lab-lkp/linux/commit/e67d702846114f60080991d51966d486b1615b49 
 
