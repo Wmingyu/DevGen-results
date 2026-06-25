@@ -51,7 +51,7 @@ Welcome to my Kernel Bug Tracker repository! This repository serves as an open r
 | #025 | `drivers/net/wireless/mac80211_hwsim.c`          | [Context-recursion deadlock in mac80211_hwsim](https://github.com/Wmingyu/DevGen-results/blob/main/details/Context-recursion%20deadlock%20in%20mac80211_hwsim.md) | 👀**Bug Confirmed**<br/>🔄 **Indirectly Fixed**                |
 | #026 | `drivers/i2c/busses/i2c-i801.c`                  | [Interrupt storm in i801_isr() via invalid block read size](https://github.com/Wmingyu/DevGen-results/blob/main/details/Interrupt%20storm%20in%20i801_isr()%20via%20invalid%20block%20read%20size.md) | 🆕 **Bug Reported**<br/>                                      |
 | #027 | `drivers/misc/ibmasm/module.c`                   | [Page fault via undersized PCI BAR 0 in ibmasm](https://github.com/Wmingyu/DevGen-results/blob/main/details/Page%20fault%20via%20undersized%20PCI%20BAR%200%20in%20ibmasm.md) | 🆕 **Bug Confirmed**<br/>                                     |
-| #028 | `drivers/video/fbdev/core/fbcon.c`               | [Out-of-bounds read in err_out of fbcon_do_set_font()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Out-of-bounds%20read%20in%20err_out%20of%20fbcon_do_set_font().md) | 🆕**Bug Reported** 🛠️ **Patch Sent**                           |
+| #028 | `drivers/video/fbdev/core/fbcon.c`               | [Out-of-bounds read in err_out of fbcon_do_set_font()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Out-of-bounds%20read%20in%20err_out%20of%20fbcon_do_set_font().md) | ✅ **Patch Accepted**<br/>                                    |
 
 ---
 
