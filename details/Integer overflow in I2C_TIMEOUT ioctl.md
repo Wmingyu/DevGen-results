@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `drivers/i2c/i2c-dev.c`
-* **Current Status:** ✅ **Patch Accepted**   **Applied to all stable trees(v5.15-v7.0)**
+* **Current Status:** [CVE-2026-52948](https://www.cve.org/CVERecord?id=CVE-2026-52948) ✅ **Patch Accepted**   **Applied to all stable trees(v5.15-v7.0)**
 * **Notes:** A missing bounds check before multiplying the user-provided timeout by 10 causes an integer overflow, leading to a negative timeout value and triggering a local DoS (SMBus state machine corruption).
 
 ## 🔗 Mailing List Threads & Timeline
