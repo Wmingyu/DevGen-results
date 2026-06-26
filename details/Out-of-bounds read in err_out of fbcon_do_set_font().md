@@ -16,4 +16,5 @@ This section tracks the complete email correspondence and patch history for this
 | sashiko-result:[PATCH] fbdev: fbcon: fix out-of-bounds read in err_out of fbcon_do_set_font() | <u>[lore.kernel.org](https://sashiko.dev/#/patchset/20260624083316.389677-1-w15303746062%40163.com)</u> |
 | Re: [PATCH] fbdev: fbcon: fix out-of-bounds read in err_out of fbcon_do_set_font() | <u>[lore.kernel.org](https://lore.kernel.org/all/7dd87e55-5170-4317-8c9e-38a7868f68fc@suse.de/)</u> |
 | [PATCH v2] fbdev: fbcon: fix out-of-bounds read in err_out of fbcon_do_set_font() | <u>[lore.kernel.org](https://lore.kernel.org/all/20260625160306.438847-1-25181214217@stu.xidian.edu.cn/)</u> |
+| Re: [PATCH v2] fbdev: fbcon: fix out-of-bounds read in err_out of fbcon_do_set_font() | <u>[lore.kernel.org](https://lore.kernel.org/all/79ba53b6-97d6-41dc-aeaf-69181262e8b5@gmx.de/)</u> |
 
