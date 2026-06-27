@@ -52,6 +52,8 @@ Welcome to my Kernel Bug Tracker repository! This repository serves as an open r
 | #026 | `drivers/i2c/busses/i2c-i801.c`                  | [Interrupt storm in i801_isr() via invalid block read size](https://github.com/Wmingyu/DevGen-results/blob/main/details/Interrupt%20storm%20in%20i801_isr()%20via%20invalid%20block%20read%20size.md) | 🆕 **Bug Reported**<br/>                                      |
 | #027 | `drivers/misc/ibmasm/module.c`                   | [Page fault via undersized PCI BAR 0 in ibmasm](https://github.com/Wmingyu/DevGen-results/blob/main/details/Page%20fault%20via%20undersized%20PCI%20BAR%200%20in%20ibmasm.md) | 🆕 **Bug Confirmed**<br/>                                     |
 | #028 | `drivers/video/fbdev/core/fbcon.c`               | [Out-of-bounds read in err_out of fbcon_do_set_font()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Out-of-bounds%20read%20in%20err_out%20of%20fbcon_do_set_font().md) | ✅ **Patch Accepted**<br/>                                    |
+| #029 | `drivers/i2c/busses/i2c-i801.c`                  | [Stack-out-of-bounds in i801_isr_byte_done()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Stack-out-of-bounds%20in%20i801_isr_byte_done().md) | 🆕 **Bug Reported**<br/>🛠️ **Patch Sent**                      |
+|      |                                                  |                                                              |                                                              |
 
 ---
 
