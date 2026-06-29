@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `drivers/char/agp/amd64-agp.c`
-* **Current Status:**  ✅ **Patch Accepted**
+* **Current Status:**  ✅ **Patch Accepted** [CVE-2026-53325](https://www.cve.org/CVERecord?id=CVE-2026-53325)
 * **Notes:** A missing NULL check for `node_to_amd_nb(0)` causes a kernel panic in mixed or emulated environments.
 
 ## 🔗 Mailing List Threads & Timeline
