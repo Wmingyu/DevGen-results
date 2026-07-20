@@ -54,7 +54,7 @@ Welcome to my Kernel Bug Tracker repository! This repository serves as an open r
 | #028 | `drivers/video/fbdev/core/fbcon.c`               | [Out-of-bounds read in err_out of fbcon_do_set_font()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Out-of-bounds%20read%20in%20err_out%20of%20fbcon_do_set_font().md) | ✅ **Patch Accepted**<br/>                                    |
 | #029 | `drivers/i2c/busses/i2c-i801.c`                  | [Stack-out-of-bounds in i801_isr_byte_done()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Stack-out-of-bounds%20in%20i801_isr_byte_done().md) | 🆕 **Bug Reported**<br/>🛠️ **Patch Sent**                      |
 | #030 | `kernel/module/main.c`                           | [UAF and GPF in idempotent_init_module()](https://github.com/Wmingyu/DevGen-results/blob/main/details/UAF%20and%20GPF%20in%20idempotent_init_module().md) | 🆕 **Bug Confirmed**<br/>🛠️ **Patch Sent**                     |
-|      |                                                  |                                                              |                                                              |
+| #031 | `drivers/tty/serial/8250/8250_port.c`            | [Page Fault and UAF in mem_serial_in()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Page%20Fault%20and%20UAF%20in%20mem_serial_in().md) | 🆕 **Bug Reported**<br/>🛠️ **Patch Sent**                      |
 |      |                                                  |                                                              |                                                              |
 
 ---
