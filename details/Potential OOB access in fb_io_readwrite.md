@@ -14,4 +14,5 @@ This section tracks the complete email correspondence and patch history for this
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
 | [PATCH] fbdev: core: Clamp total_size to smem_len in fb_io_read/write | <u>[lore.kernel.org](https://lore.kernel.org/all/20260720135534.103599-1-25181214217@stu.xidian.edu.cn/)</u> |
 | AI-Result                                                    | <u>[lore.kernel.org](https://sashiko.dev/#/patchset/20260720135534.103599-1-25181214217%40stu.xidian.edu.cn)</u> |
+| Re: [PATCH] fbdev: core: Clamp total_size to smem_len in fb_io_read/write | <u>[lore.kernel.org](https://lore.kernel.org/all/20260720141559.0912D1F00A3A@smtp.kernel.org/)</u> |
 
