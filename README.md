@@ -57,6 +57,9 @@ Welcome to my Kernel Bug Tracker repository! This repository serves as an open r
 | #031 | `drivers/tty/serial/8250/8250_port.c`            | [Page Fault and UAF in mem_serial_in()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Page%20Fault%20and%20UAF%20in%20mem_serial_in().md) | 🆕**Bug Confirmed** <br/>❌ **WontFix**                        |
 | #032 | `drivers/video/fbdev/core/fb_io_fops.c`          | [Potential OOB access in fb_io_read/write](https://github.com/Wmingyu/DevGen-results/blob/main/details/Potential%20OOB%20access%20in%20fb_io_readwrite.md) | 🆕 **Bug Confirmed**<br/>🛠️ **Patch Sent**                     |
 | #033 | `drivers/video/fbdev/core/fb_io_fops.c`          | [Pointer desynchronization and OOB read in fb_io_read()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Pointer%20desynchronization%20and%20OOB%20read%20in%20fb_io_read().md) | 🆕 **Bug Reported** <br/>🛠️ **Patch Sent**                     |
+| #034 | `drivers/i2c/busses/i2c-i801.c`                  | [Hung Task panics via malicious I2C_TIMEOUT ioctl](https://github.com/Wmingyu/DevGen-results/blob/main/details/Hung%20Task%20panics%20via%20malicious%20I2C_TIMEOUT%20ioctl.md) | 🆕 **Bug Reported** <br/>🛠️ **Patch Sent**                     |
+| #035 |                                                  |                                                              |                                                              |
+| #036 |                                                  |                                                              |                                                              |
 
 ---
 
