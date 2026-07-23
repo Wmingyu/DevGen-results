@@ -58,7 +58,7 @@ Welcome to my Kernel Bug Tracker repository! This repository serves as an open r
 | #032 | `drivers/video/fbdev/core/fb_io_fops.c`          | [Potential OOB access in fb_io_read/write](https://github.com/Wmingyu/DevGen-results/blob/main/details/Potential%20OOB%20access%20in%20fb_io_readwrite.md) | 🆕 **Bug Confirmed**<br/>🛠️ **Patch Sent**                     |
 | #033 | `drivers/video/fbdev/core/fb_io_fops.c`          | [Pointer desynchronization and OOB read in fb_io_read()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Pointer%20desynchronization%20and%20OOB%20read%20in%20fb_io_read().md) | 🆕 **Bug Reported** <br/>🛠️ **Patch Sent**                     |
 | #034 | `drivers/i2c/busses/i2c-i801.c`                  | [Hung Task panics via malicious I2C_TIMEOUT ioctl](https://github.com/Wmingyu/DevGen-results/blob/main/details/Hung%20Task%20panics%20via%20malicious%20I2C_TIMEOUT%20ioctl.md) | 🆕 **Bug Reported** <br/>🛠️ **Patch Sent**                     |
-| #035 |                                                  |                                                              |                                                              |
+| #035 | `drivers/tty/vt/vt.c`                            | [Memory leak in vc_allocate() on screen buffer allocation failure](https://github.com/Wmingyu/DevGen-results/blob/main/details/Memory%20leak%20in%20vc_allocate()%20on%20screen%20buffer%20allocation%20failure.md) | 🆕 **Bug Reported** <br/>🛠️ **Patch Sent**                     |
 | #036 |                                                  |                                                              |                                                              |
 
 ---
