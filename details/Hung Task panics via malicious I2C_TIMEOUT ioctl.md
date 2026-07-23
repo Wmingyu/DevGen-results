@@ -1,0 +1,18 @@
+# 🐛 Hung Task panics via malicious I2C_TIMEOUT ioctl
+
+## 📌 Overview
+* **Location:** `drivers/i2c/busses/i2c-i801.c`
+* **Current Status:** 🆕 **Bug Reported**  🛠️ **Patch Sent**
+* **Notes:** Userspace applications can inject an arbitrarily large timeout value via the I2C_TIMEOUT ioctl. If the hardware fails to respond, the i2c-i801 driver blocks for the entirety of this requested timeout while holding the i2c adapter lock. This starves other processes in TASK_UNINTERRUPTIBLE sleep, ultimately triggering Hung Task panics and system lockups.
+
+## 🔗 Mailing List Threads & Timeline
+
+This section tracks the complete email correspondence and patch history for this vulnerability.
+
+| Description                                                  | Link                                                         |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [PATCH] i2c: i801: Clamp adapter timeout to prevent system lockup | <u>[lore.kernel.org](https://lore.kernel.org/all/20260723025157.115897-1-25181214217@stu.xidian.edu.cn/)</u> |
+|                                                              | <u>[lore.kernel.org](#)</u>                                  |
+|                                                              | <u>[lore.kernel.org](#)</u>                                  |
+|                                                              | <u>[lore.kernel.org](#)</u>                                  |
+
