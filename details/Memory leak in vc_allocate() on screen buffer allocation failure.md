@@ -14,5 +14,5 @@ This section tracks the complete email correspondence and patch history for this
 | :---------------------------------------------------- | :----------------------------------------------------------- |
 | [PATCH] tty: vt: fix memory leak in vc_allocate()     | <u>[lore.kernel.org](https://lore.kernel.org/all/20260723070530.117552-1-25181214217@stu.xidian.edu.cn/)</u> |
 | Re: [PATCH] tty: vt: fix memory leak in vc_allocate() | <u>[lore.kernel.org](https://lore.kernel.org/all/2026072345-copartner-shrink-9596@gregkh/)</u> |
-| Re: [PATCH] tty: vt: fix memory leak in vc_allocate() | <u>[lore.kernel.org](https://github.com/Wmingyu/DevGen-results/blob/main/email-list/Re%20%5BPATCH%5D%20tty%20vt%20fix%20memory%20leak%20in%20vc_allocate().txt)</u> |
+| Re: [PATCH] tty: vt: fix memory leak in vc_allocate() | <u>[lore.kernel.org](https://lore.kernel.org/all/88f9ac58-8079-415d-902c-3b9455a9d17c@stu.xidian.edu.cn/#t)</u> |
 
