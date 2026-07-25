@@ -15,4 +15,6 @@ This section tracks the complete email correspondence and patch history for this
 | [PATCH] i2c: i801: Clamp adapter timeout to prevent system lockup | <u>[lore.kernel.org](https://lore.kernel.org/all/20260723025157.115897-1-25181214217@stu.xidian.edu.cn/)</u> |
 | [PATCH v2] i2c: i801: Clamp adapter timeout to prevent system lockup | <u>[lore.kernel.org](https://lore.kernel.org/all/20260723034331.116690-1-25181214217@stu.xidian.edu.cn/)</u> |
 | AI-Result                                                    | <u>[lore.kernel.org]([Sashiko](https://sashiko.dev/#/patchset/20260723034331.116690-1-25181214217%40stu.xidian.edu.cn))</u> |
+| Re: [PATCH v2] i2c: i801: Clamp adapter timeout to prevent system lockup | <u>[lore.kernel.org](https://lore.kernel.org/all/amPinh8c7GwQx4Le@zenone.zhora.eu/)</u> |
+| Re: [PATCH v2] i2c: i801: Clamp adapter timeout to prevent system lockup | <u>[lore.kernel.org](https://lore.kernel.org/all/0fbbc160-a599-4384-b78a-bf8e6afd963e@stu.xidian.edu.cn/)</u> |
 
