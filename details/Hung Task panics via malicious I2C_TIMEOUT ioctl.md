@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `drivers/i2c/busses/i2c-i801.c`
-* **Current Status:** 🆕 **Bug Reported**  🛠️ **Patch Sent**
+* **Current Status:** ❌ **WontFix**
 * **Notes:** Userspace applications can inject an arbitrarily large timeout value via the I2C_TIMEOUT ioctl. If the hardware fails to respond, the i2c-i801 driver blocks for the entirety of this requested timeout while holding the i2c adapter lock. This starves other processes in TASK_UNINTERRUPTIBLE sleep, ultimately triggering Hung Task panics and system lockups.
 
 ## 🔗 Mailing List Threads & Timeline
