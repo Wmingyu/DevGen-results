@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `drivers/bluetooth/hci_ldisc.c`
-* **Current Status:** ✅ **Patch Accepted** **Applied to all stable trees(v5.10-v7.0)** [CVE-2026-46275](https://www.cve.org/CVERecord?id=CVE-2026-46275)
+* **Current Status:** ✅ **Patch Accepted**  [CVE-2026-46275](https://www.cve.org/CVERecord?id=CVE-2026-46275)  **HIGH 7.8**
 * **Notes:** A complex series of Use-After-Free (UAF) and Null Pointer Dereference (NPD) vulnerabilities caused by flawed lifecycle management and race conditions in the HCI UART driver. The issues occurred during concurrent TTY hangup and initialization, leading to double-frees of `tx_skb` and premature freeing of the `hu` and `hdev` structs. Fixed by strictly re-ordering flag clearance (`HCI_UART_PROTO_READY`), `cancel_work_sync()`, and protocol `close()` callbacks across all initialization and teardown paths.
 
 ## 🔗 Mailing List Threads & Timeline
@@ -31,4 +31,3 @@ This section tracks the complete email correspondence and patch history for this
 | Re: [PATCH v9] Bluetooth: hci_uart: fix UAFs and race conditions in close and init paths | <u>[lore.kernel.org](https://lore.kernel.org/all/177920280488.2756414.8251481561878776667.git-patchwork-notify@kernel.org/)</u> |
 | Bluetooth: hci_uart: fix UAFs and race conditions in close and init paths | <u>[lore.kernel.org](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=c1bb9336ae6b54a5f6a353c4bd4ed9a4307e429b)</u> |
 
-**Backported to v5.10 - v7.0**
