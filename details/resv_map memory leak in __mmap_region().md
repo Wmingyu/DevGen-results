@@ -1,9 +1,10 @@
 # 🐛 resv_map memory leak in __mmap_region()
 
 ## 📌 Overview
+
 *  **Location:** `fs/hugetlbfs/inode.c` & `mm/vma.c`
-* **Current Status:** ✅ **Patch Accepted**
-* **Notes:** A regression introduced by the VMA iterator refactoring causes a `resv_map` memory leak when VMA creation fails during the `mmap_prepare` phase.
+*  **Current Status:** ✅ **Accepted** **[CVE-2026-46318](https://www.cve.org/CVERecord?id=CVE-2026-46318)**
+*  **Notes:** A regression introduced by the VMA iterator refactoring causes a `resv_map` memory leak when VMA creation fails during the `mmap_prepare` phase.
 
 ## 🔗 Mailing List Threads & Timeline
 
