@@ -15,6 +15,7 @@ Welcome to my Kernel Bug Tracker repository! This repository serves as an open r
 |   ✅    | **Patch Accepted**   | The patch is approved by maintainers (e.g., `Reviewed-by`) and merged or queued upstream. |
 |   ❌    | **WontFix**          | The bug cannot be fixed (e.g., due to design choices or hardware limits). |
 |   🔄    | **Indirectly Fixed** | Indirectly resolved through upstream codebase refactoring or unrelated patches. |
+|   🛡️    | **Crash**            | Crash triggered by privileged API abuse. Upstream considers it intended behavior and not a security bug. |
 
 ---
 
@@ -55,9 +56,9 @@ Welcome to my Kernel Bug Tracker repository! This repository serves as an open r
 | #029 | `drivers/i2c/busses/i2c-i801.c`                  | [Stack-out-of-bounds in i801_isr_byte_done()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Stack-out-of-bounds%20in%20i801_isr_byte_done().md) | 🆕 **Bug Reported** <br/>🛠️ **Patch Sent**                     |
 | #030 | `kernel/module/main.c`                           | [UAF and GPF in idempotent_init_module()](https://github.com/Wmingyu/DevGen-results/blob/main/details/UAF%20and%20GPF%20in%20idempotent_init_module().md) | 🆕 **Bug Confirmed**<br/>🛠️ **Patch Sent**                     |
 | #031 | `drivers/tty/serial/8250/8250_port.c`            | [Page Fault and UAF in mem_serial_in()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Page%20Fault%20and%20UAF%20in%20mem_serial_in().md) | 🆕**Bug Confirmed** <br/>❌ **WontFix**                        |
-| #032 | `drivers/video/fbdev/core/fb_io_fops.c`          | [Potential OOB access in fb_io_read/write](https://github.com/Wmingyu/DevGen-results/blob/main/details/Potential%20OOB%20access%20in%20fb_io_readwrite.md) | 🆕 **Bug Confirmed**<br/>🛠️ **Patch Sent**                     |
-| #033 | `drivers/video/fbdev/core/fb_io_fops.c`          | [Pointer desynchronization and OOB read in fb_io_read()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Pointer%20desynchronization%20and%20OOB%20read%20in%20fb_io_read().md) | 🆕 **Bug Reported** <br/>🛠️ **Patch Sent**                     |
-| #034 | `drivers/i2c/busses/i2c-i801.c`                  | [Hung Task panics via malicious I2C_TIMEOUT ioctl](https://github.com/Wmingyu/DevGen-results/blob/main/details/Hung%20Task%20panics%20via%20malicious%20I2C_TIMEOUT%20ioctl.md) | ❌ **WontFix**                                                |
+| #032 | `drivers/video/fbdev/core/fb_io_fops.c`          | [Potential OOB access in fb_io_read/write](https://github.com/Wmingyu/DevGen-results/blob/main/details/Potential%20OOB%20access%20in%20fb_io_readwrite.md) | ✅ **Patch Accepted**                                         |
+| #033 | `drivers/video/fbdev/core/fb_io_fops.c`          | [Pointer desynchronization and OOB read in fb_io_read()](https://github.com/Wmingyu/DevGen-results/blob/main/details/Pointer%20desynchronization%20and%20OOB%20read%20in%20fb_io_read().md) | ✅ **Patch Accepted**                                         |
+| #034 | `drivers/i2c/busses/i2c-i801.c`                  | [Hung Task panics via malicious I2C_TIMEOUT ioctl](https://github.com/Wmingyu/DevGen-results/blob/main/details/Hung%20Task%20panics%20via%20malicious%20I2C_TIMEOUT%20ioctl.md) | ❌ **WontFix** <br/>🛡️**Crash**                                |
 | #035 | `drivers/tty/vt/vt.c`                            | [Memory leak in vc_allocate() on screen buffer allocation failure](https://github.com/Wmingyu/DevGen-results/blob/main/details/Memory%20leak%20in%20vc_allocate()%20on%20screen%20buffer%20allocation%20failure.md) | 🆕 **Bug Reported** <br/>🛠️ **Patch Sent**                     |
 | #036 | `drivers/gpu/drm/gma500/intel_gmbus.c`           | [OOB access and integer underflow in gmbus_xfer()](https://github.com/Wmingyu/DevGen-results/blob/main/details/OOB%20access%20and%20integer%20underflow%20in%20gmbus_xfer().md) | 🆕 **Bug Reported** <br/>🛠️ **Patch Sent**                     |
 
