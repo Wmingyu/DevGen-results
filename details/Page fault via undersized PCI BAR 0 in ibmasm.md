@@ -39,4 +39,8 @@ This section tracks the complete email correspondence and patch history for this
 | [PATCH v8 1/2] misc: ibmasm: Fix static out-of-bounds MMIO access during probe | <u>[lore.kernel.org](https://lore.kernel.org/all/20260718073253.96741-2-25181214217@stu.xidian.edu.cn/)</u> |
 | [PATCH v8 2/2] misc: ibmasm: Fix dynamic out-of-bounds MMIO access via malicious MFA | <u>[lore.kernel.org](https://lore.kernel.org/all/20260718073253.96741-3-25181214217@stu.xidian.edu.cn/)</u> |
 | Result-AI Reviews                                            | <u>[lore.kernel.org](https://sashiko.dev/#/patchset/20260718073253.96741-1-25181214217%40stu.xidian.edu.cn)</u> |
+| Greg KH:Re: [PATCH v8 1/2] misc: ibmasm: Fix static out-of-bounds MMIO access during probe | <u>[lore.kernel.org](https://lore.kernel.org/stable/2026073120-deplete-bronzing-481c@gregkh/)</u> |
+| Greg KH:Re: [PATCH v8 2/2] misc: ibmasm: Fix dynamic out-of-bounds MMIO access via malicious MFA | <u>[lore.kernel.org](https://lore.kernel.org/stable/2026073113-defy-shortage-2005@gregkh/)</u> |
+| Re: [PATCH v8 1/2] misc: ibmasm: Fix static out-of-bounds MMIO access during probe | <u>[lore.kernel.org](https://lore.kernel.org/stable/ce868846-52a6-47d7-96d5-1f14f1e9b5f9@stu.xidian.edu.cn/)</u> |
+| Re: [PATCH v8 2/2] misc: ibmasm: Fix dynamic out-of-bounds MMIO access via malicious MFA | <u>[lore.kernel.org](https://lore.kernel.org/stable/c6e161e2-3ba5-4384-ab43-ef9a802052fe@stu.xidian.edu.cn/)</u> |
 
