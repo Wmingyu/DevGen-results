@@ -61,7 +61,7 @@ Welcome to my Kernel Bug Tracker repository! This repository serves as an open r
 | #034 | `drivers/i2c/busses/i2c-i801.c`                  | [Hung Task panics via malicious I2C_TIMEOUT ioctl](https://github.com/Wmingyu/DevGen-results/blob/main/details/Hung%20Task%20panics%20via%20malicious%20I2C_TIMEOUT%20ioctl.md) | ❌ **WontFix** <br/>🛡️**Crash**                                |
 | #035 | `drivers/tty/vt/vt.c`                            | [Memory leak in vc_allocate() on screen buffer allocation failure](https://github.com/Wmingyu/DevGen-results/blob/main/details/Memory%20leak%20in%20vc_allocate()%20on%20screen%20buffer%20allocation%20failure.md) | 🆕 **Bug Confirmed** <br/>🛠️ **Patch Sent**                    |
 | #036 | `drivers/gpu/drm/gma500/intel_gmbus.c`           | [OOB access and integer underflow in gmbus_xfer()](https://github.com/Wmingyu/DevGen-results/blob/main/details/OOB%20access%20and%20integer%20underflow%20in%20gmbus_xfer().md) | 🆕 **Bug Reported** <br/>🛠️ **Patch Sent**                     |
-| #036 | `drivers/tty/tty_io.c`                           | [RCU stall via excessively long TCSBRKP duration](https://github.com/Wmingyu/DevGen-results/blob/main/details/RCU%20stall%20via%20excessively%20long%20TCSBRKP%20duration.md) | 🆕 **Bug Reported**<br/>                                      |
+| #036 | `drivers/tty/tty_io.c`                           | [RCU stall via excessively long TCSBRKP duration](https://github.com/Wmingyu/DevGen-results/blob/main/details/RCU%20stall%20via%20excessively%20long%20TCSBRKP%20duration.md) | 👀 **Bug Confirmed**<br/>❌ **WontFix**                        |
 
 ---
 
