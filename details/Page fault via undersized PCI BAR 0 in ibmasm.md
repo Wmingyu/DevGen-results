@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `drivers/misc/ibmasm/module.c`
-* **Current Status:** 🆕 **Bug Confirmed** 
+* **Current Status:** ✅ **Patch Accepted**
 * **Notes:** The `ibmasm` driver maps PCI BAR 0 without verifying if the resource length is sufficient to cover the statically accessed `INTR_CONTROL_REGISTER` (offset 0x13A4). A malformed or undersized BAR 0 allows the `readl()` operation to cross the page boundary into unmapped memory, triggering a page fault during module probe. Since this occurs while holding the module loading lock, it cascades into a global system soft lockup. Fixed by validating that the BAR size is at least `INTR_CONTROL_REGISTER + 4` before invoking `pci_ioremap_bar()`.
 
 ## 🔗 Mailing List Threads & Timeline
@@ -43,4 +43,9 @@ This section tracks the complete email correspondence and patch history for this
 | Greg KH:Re: [PATCH v8 2/2] misc: ibmasm: Fix dynamic out-of-bounds MMIO access via malicious MFA | <u>[lore.kernel.org](https://lore.kernel.org/stable/2026073113-defy-shortage-2005@gregkh/)</u> |
 | Re: [PATCH v8 1/2] misc: ibmasm: Fix static out-of-bounds MMIO access during probe | <u>[lore.kernel.org](https://lore.kernel.org/stable/ce868846-52a6-47d7-96d5-1f14f1e9b5f9@stu.xidian.edu.cn/)</u> |
 | Re: [PATCH v8 2/2] misc: ibmasm: Fix dynamic out-of-bounds MMIO access via malicious MFA | <u>[lore.kernel.org](https://lore.kernel.org/stable/c6e161e2-3ba5-4384-ab43-ef9a802052fe@stu.xidian.edu.cn/)</u> |
+| Greg KH:Re: [PATCH v8 1/2] misc: ibmasm: Fix static out-of-bounds MMIO access during probe | <u>[lore.kernel.org](https://lore.kernel.org/stable/2026073114-staff-turbine-9864@gregkh/)</u> |
+| Re: [PATCH v8 1/2] misc: ibmasm: Fix static out-of-bounds MMIO access during probe | <u>[lore.kernel.org](https://lore.kernel.org/stable/4b8fc5e2-8965-47a0-8be8-b12337398fe6@stu.xidian.edu.cn/)</u> |
+| Greg KH:Re: [PATCH v8 1/2] misc: ibmasm: Fix static out-of-bounds MMIO access during probe | <u>[lore.kernel.org](https://lore.kernel.org/stable/2026080153-unthread-quake-ce1f@gregkh/)</u> |
+| [PATCH] misc: ibmasm: Remove obsolete IBM Remote Supervisor Adapter driver | <u>[lore.kernel.org](https://lore.kernel.org/stable/20260801070756.161698-1-25181214217@stu.xidian.edu.cn/)</u> |
+| Arnd:Re: [PATCH] misc: ibmasm: Remove obsolete IBM Remote Supervisor Adapter driver | <u>[lore.kernel.org](https://lore.kernel.org/stable/f22ccf39-7d07-4b96-be44-89d86153402c@app.fastmail.com/)</u> |
 
