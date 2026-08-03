@@ -17,4 +17,7 @@ This section tracks the complete email correspondence and patch history for this
 | Mingyu Wang:Re: [PATCH] tty: vt: fix memory leak in vc_allocate() | <u>[lore.kernel.org](https://lore.kernel.org/stable/88f9ac58-8079-415d-902c-3b9455a9d17c@stu.xidian.edu.cn/)</u> |
 | Greg KH:Re: [PATCH] tty: vt: fix memory leak in vc_allocate() | <u>[lore.kernel.org](https://lore.kernel.org/stable/2026073028-icing-dallying-9229@gregkh/)</u> |
 | [PATCH v2] tty: vt: fix memory leak in vc_allocate()         | <u>[lore.kernel.org](https://lore.kernel.org/stable/20260731024550.158801-1-25181214217@stu.xidian.edu.cn/)</u> |
+| Greg KH:[PATCH v2] tty: vt: fix memory leak in vc_allocate() | <u>[lore.kernel.org](https://lore.kernel.org/stable/2026080339-proofing-catsup-bee9@gregkh/)</u> |
+| Re: [PATCH v2] tty: vt: fix memory leak in vc_allocate()     | <u>[lore.kernel.org](https://lore.kernel.org/stable/514ebe5c-4867-47e8-9500-0b0cab9eb243@stu.xidian.edu.cn/)</u> |
+| PATCH v3] tty: vt: fix memory leak in vc_allocate()          | <u>[lore.kernel.org](https://lore.kernel.org/stable/20260803144556.163856-1-25181214217@stu.xidian.edu.cn/)</u> |
 
