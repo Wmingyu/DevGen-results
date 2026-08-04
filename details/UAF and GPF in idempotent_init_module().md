@@ -15,5 +15,6 @@ This section tracks the complete email correspondence and patch history for this
 | [PATCH] module: fix UAF and GPF in idempotent_init_module via heap allocation | <u>[lore.kernel.org](https://lore.kernel.org/all/20260717082601.81704-1-25181214217@stu.xidian.edu.cn/)</u> |
 | Re: [PATCH] module: fix UAF and GPF in idempotent_init_module via heap allocation | <u>[lore.kernel.org](https://lore.kernel.org/all/20260717084017.A9CFE1F000E9@smtp.kernel.org/)</u> |
 | Re: [PATCH] module: fix UAF and GPF in idempotent_init_module via heap allocation | <u>[lore.kernel.org](https://lore.kernel.org/all/2459be1a-7507-4bc4-a235-09c18ca6b8a6@stu.xidian.edu.cn/)</u> |
-|                                                              | <u>[lore.kernel.org](#)</u>                                  |
+| Petr Pavlu:Re: [PATCH] module: fix UAF and GPF in idempotent_init_module via heap allocation | <u>[lore.kernel.org](https://lore.kernel.org/stable/8d507b50-b5a2-48a8-a4bb-f196ac28b5e4@suse.com/)</u> |
+| Re: [PATCH] module: fix UAF and GPF in idempotent_init_module via heap allocation | <u>[lore.kernel.org](https://lore.kernel.org/stable/f79bc014-a606-4ab5-adfd-1b56dbdc30ba@stu.xidian.edu.cn/)</u> |
 
