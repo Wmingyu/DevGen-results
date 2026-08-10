@@ -16,4 +16,5 @@ This section tracks the complete email correspondence and patch history for this
 | AI-Result                                                    | <u>[lore.kernel.org](https://sashiko.dev/#/patchset/20260721081942.107024-1-25181214217%40stu.xidian.edu.cn)</u> |
 | Helge Deller:Re: [PATCH] fbdev: core: Fix pointer desynchronization in fb_io_read() | <u>[lore.kernel.org](https://lore.kernel.org/all/86a0387c-b704-4ea5-8117-02b30c4faeb3@gmx.de/)</u> |
 | Mingyu Wang: Re: [PATCH] fbdev: core: Fix pointer desynchronization in fb_io_read() | <u>[lore.kernel.org](https://lore.kernel.org/all/8b900197-f633-4917-b1f4-5c8cd46f025f@stu.xidian.edu.cn/)</u> |
+| fbdev: core: Fix pointer desynchronization in fb_io_read()   | <u>[lore.kernel.org](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=81cc73be40c6f028f1ee3f438ace46afe666dbae)</u> |
 
