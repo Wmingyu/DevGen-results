@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 * **Location:** `drivers/video/fbdev/core/fb_io_fops.c`
-* **Current Status:** **[CVE-2026-80578](https://www.cve.org/CVERecord?id=CVE-2026-80578)**✅ **Patch Accepted** **HIGH 7.3**
+* **Current Status:** [CVE-2026-80578](https://www.cve.org/CVERecord?id=CVE-2026-80578)**✅ **Patch Accepted** **HIGH 7.3**
 * **Notes:** In fb_io_read(), a partial copy_to_user() due to a faulty user buffer leaves the hardware 'src' pointer over-advanced relative to the remaining byte count. This desynchronization causes subsequent loop iterations to perform out-of-bounds hardware I/O reads.
 
 ## 🔗 Mailing List Threads & Timeline
